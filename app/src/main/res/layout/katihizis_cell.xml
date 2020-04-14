@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="100dp"
+    android:backgroundTint="@color/colorPrimaryDark"
+    android:background="@drawable/linear">
+
+    <TextView
+        android:id="@+id/id_katihizis_cell_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Medium Text"
+        android:textStyle="italic"
+        android:textAlignment="textStart"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:fontFamily="@font/actor"
+        android:textColor="@color/colorSiviText"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

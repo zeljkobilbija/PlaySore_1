@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name="nazivi_meseca">
+        <item>Јануар</item>
+        <item>Фебруар</item>
+        <item>Март</item>
+        <item>Април</item>
+        <item>Мај</item>
+        <item>Јун</item>
+        <item>Јул</item>
+        <item>Август</item>
+        <item>Септембар</item>
+        <item>Октобар</item>
+        <item>Новембар</item>
+        <item>Децембар</item>
+    </string-array>
+</resources>

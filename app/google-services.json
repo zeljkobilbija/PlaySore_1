@@ -1,0 +1,72 @@
+{
+  "project_info": {
+    "project_number": "1021483874969",
+    "firebase_url": "https://pravoslavac-6ded4.firebaseio.com",
+    "project_id": "pravoslavac-6ded4",
+    "storage_bucket": "pravoslavac-6ded4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021483874969:android:10c1b670bde808c40d9608",
+        "android_client_info": {
+          "package_name": "com.interfacemockup.pravoslavac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021483874969-ebfq5395dvqcodqduk2sqr99kc02bff4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.interfacemockup.pravoslavac",
+            "certificate_hash": "3e6ad9ec7b3d4cb83eea2add3525f0b55b30c8ed"
+          }
+        },
+        {
+          "client_id": "1021483874969-uq91judvk5c4k0prvpu6i3prqgjv6m2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.interfacemockup.pravoslavac",
+            "certificate_hash": "da72fdb3d75045cfbc838ad8b83c9388934099dd"
+          }
+        },
+        {
+          "client_id": "1021483874969-gfrli0q5iqqr8iodob6l190k4jt50o8l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.interfacemockup.pravoslavac",
+            "certificate_hash": "9cff6ec89f3fc367eed9f32042463581b0e5dd5f"
+          }
+        },
+        {
+          "client_id": "1021483874969-lek20uvggq1cm29445cr3ve9vu1doffi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7Khbogy8Fp6lLagHPztsfs3j0AVZXL6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021483874969-lek20uvggq1cm29445cr3ve9vu1doffi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1021483874969-nnh90ksgnjgihgethc6dklpvlk1c3fna.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iphonemocks.Pravoslavni-Katihizis"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7920431183682527~1369121836"
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Pravoslavac</string>
+    <string name="post_label">POST</string>
+    <string name="greg_datum_label">Novi datum</string>
+    <string name="pravoslavnipostlabel">POST</string>
+    <string name="gregDatum">Novi Datum</string>
+    <string name="julijanski_datum">Julijanski Datum</string>
+    <string name="svetac_label">Ime svetitelja</string>
+    <string name="novi_gregorijanski_datum">Novi-Gregorijanski datum</string>
+    <string name="stari_julijanski_kalendar">Stari - Julijanski kalendar</string>
+    <string name="btnA">Kalendar</string>
+    <string name="btnB">K</string>
+    <string name="btnC">$</string>
+    <string name="btnD">-</string>
+    <string name="todo">TODO</string>
+    <string name="msg_token_fmt">"Token is -> %s"</string>
+    <string name="msg_subscribed">Prihvacen upis na grupu allDevices</string>
+    <string name="msg_subscribe_failed">Failed to subscribe</string>
+    <string name="default_notification_channel_id">pojma nemam o cemu se radi</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="jesus">jesus</string>
+    <string name="back">Назад</string>
+    <string name="selekcija_kalendara_">selekcija kalendara godisnjeg i mesecnog</string>
+    <string name="back_button">back button image za kalendar 12 meseci</string>
+    <string name="_2020_godina">2020. godina</string>
+    <string name="naziv_meseca">Naziv Meseca</string>
+    <string name="ime_svetitelja">Ime Svetitelja</string>
+    <string name="datum">21. januar 2020 god.</string>
+    <string name="info_text">Хвала Вам што сте изабрали ову апикацију која ће Вам бити од користи надам се, а такође се надам да је довољно добро направљена и да ћете је користити на обострано задовољство. Очекујем ваше реакције, примедбе и предлоге а ради побољшања исте. Свако добро.</string>
+    <string name="back_btn_info_activity">Back btn info activity</string>
+    <string name="title_molitve_list">Items</string>
+    <string name="title_molitve_detail">Molitve Detail</string>
+    <string name="back_btn_molitve_activity">back_btn_molitve_activity</string>
+    <string name="ikona_za_molitvu">ikona za molitvu</string>
+    <string name="textview_odgovor">TextView odgovor</string>
+    <string name="textview_pitanje">TextView pitanje</string>
+    <string name="katihizis">Катихизис</string>
+    <string name="katihizis_image">katihizis mmage</string>
+    <string name="share_image">share_image</string>
+    <string name="molitva_image">molitva_image</string>
+    <string name="info_image">info image</string>
+    <string name="dnevna_ikona">dnevna ikona</string>
+    <string name="post_ili_ne">Post ili ne</string>
+
+</resources>
