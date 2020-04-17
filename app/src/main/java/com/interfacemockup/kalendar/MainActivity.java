@@ -322,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setType("text/plain");
         intent.putExtra(Intent.EXTRA_TEXT, link.toString());
 
-        startActivity(Intent.createChooser(intent, "Share Link"));
+        startActivity(Intent.createChooser(intent, "Поделите апикацију Православац, Српски Православни Календар са својим пријатељима"));
 
     }
 
