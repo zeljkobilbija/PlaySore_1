@@ -151,8 +151,10 @@ public class MainActivity extends AppCompatActivity {
         _julijanskiDatumLabel.napisiJulijanskiDatum(counter_to_add);
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
 
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
 
-        addMob();
 
         //TODO: Ova funkcija ispod izgleda nije uopste potrebna osim za pronalazenje tokena
         //findMessageToken();

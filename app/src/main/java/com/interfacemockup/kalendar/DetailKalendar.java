@@ -60,7 +60,9 @@ public class DetailKalendar extends AppCompatActivity {
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.sample_anim);
         _ikona.startAnimation(anim);
 
-        addMob();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
 
     }
 

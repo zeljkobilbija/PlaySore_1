@@ -37,7 +37,10 @@ public class KatihizisDetail extends AppCompatActivity {
         //_backBtn = findViewById(R.id.id_back_kat_detail);
         _odgovor = findViewById(R.id.id_kat_odovor_text_view);
         setOdgovor(_counter);
-        addMob();
+
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
 
     }
 

@@ -2,14 +2,17 @@ package com.interfacemockup.kalendar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import com.interfacemockup.kalendar.GlobalnaClassa;
+
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniKalendar;
 
 public class HomeActivity extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 4000;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,11 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_TIME_OUT);
+
+
+        GlobalnaClassa glob = GlobalnaClassa.getInstance();
+        glob.setPokaziAdMob(true);
+
 
     }
 }

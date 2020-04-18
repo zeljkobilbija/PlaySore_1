@@ -36,7 +36,9 @@ public class MoltvaDetail extends AppCompatActivity {
         _molitva.setText(_konst.molitveTekst[_counter]);
         _molitva.setMovementMethod(new ScrollingMovementMethod());
 
-        addMob();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
     }
 
     public void kliknazad_sa_molitvi_detail(View view) {

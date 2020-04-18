@@ -25,7 +25,10 @@ public class Info extends AppCompatActivity {
 
         GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(Info.this);
         FirebaseInstanceId.getInstance().getInstanceId();
-        addMob();
+
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
 
     }
 
