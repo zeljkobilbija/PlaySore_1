@@ -42,5 +42,6 @@
     <string name="info_image">info image</string>
     <string name="dnevna_ikona">dnevna ikona</string>
     <string name="post_ili_ne">Post ili ne</string>
-
+    <string name="molitve">Молитве</string>
+    <string name="cyrillicPravoslavac">ПРАВОСЛАВАЦ</string>
 </resources>

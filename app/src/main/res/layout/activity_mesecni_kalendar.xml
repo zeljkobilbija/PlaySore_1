@@ -24,22 +24,24 @@
             android:onClick="mesecni_kal_home_btn_click"/>
 
     <TextView
-            android:id="@+id/id_mesec_textView"
-            android:text="@string/naziv_meseca"
-            android:textColor="@color/colorRosso"
-            android:fontFamily="@font/actor"
-            android:textSize="26sp"
-            android:textStyle="italic"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/id_backBtn_MesecniKalendar"
-            android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp"/>
+        android:id="@+id/id_mesec_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/actor"
+        android:gravity="center"
+        android:text="@string/naziv_meseca"
+        android:textAlignment="center"
+        android:textColor="@color/colorSiviText"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/id_Trideset_dana_ListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/id_backBtn_MesecniKalendar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
             android:id="@+id/id_Trideset_dana_ListView"
