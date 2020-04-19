@@ -32,7 +32,9 @@ public class Molitve extends AppCompatActivity {
 
         listView = findViewById(R.id.idMolitveListView);
         textView = findViewById(R.id.id_moltva_cell_textView);
-        listItem = konstante.molitveNazivi;
+        //listItem = konstante.molitveNazivi;
+
+        listItem = getResources().getStringArray(R.array.molitve);
 
         final ArrayAdapter<String> adpt = new ArrayAdapter<>(this, R.layout.moltva_cell, R.id.id_moltva_cell_textView, listItem);
         listView.setAdapter(adpt);

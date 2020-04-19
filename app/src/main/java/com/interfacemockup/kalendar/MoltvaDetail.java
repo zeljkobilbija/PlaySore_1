@@ -33,7 +33,8 @@ public class MoltvaDetail extends AppCompatActivity {
 
         _konst = new PravoslavneKonstante();
         _molitva = findViewById(R.id.id_text_molitve);
-        _molitva.setText(_konst.molitveTekst[_counter]);
+       // _molitva.setText(_konst.molitveTekst[_counter]);
+        _molitva.setText(getResources().getStringArray(R.array.molitve_tekst)[_counter]);
         _molitva.setMovementMethod(new ScrollingMovementMethod());
 
         if (GlobalnaClassa.getInstance().getPokaziAdMob()){
