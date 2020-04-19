@@ -6,8 +6,8 @@
     <string name="gregDatum">Novi Datum</string>
     <string name="julijanski_datum">Julijanski Datum</string>
     <string name="svetac_label">Ime svetitelja</string>
-    <string name="novi_gregorijanski_datum">Novi-Gregorijanski datum</string>
-    <string name="stari_julijanski_kalendar">Stari - Julijanski kalendar</string>
+    <string name="novi_gregorijanski_datum">Нови - Грегоријански календар</string>
+    <string name="stari_julijanski_kalendar">Стари - Јулијански календар</string>
     <string name="btnA">Kalendar</string>
     <string name="btnB">K</string>
     <string name="btnC">$</string>
@@ -44,4 +44,5 @@
     <string name="post_ili_ne">Post ili ne</string>
     <string name="molitve">Молитве</string>
     <string name="cyrillicPravoslavac">ПРАВОСЛАВАЦ</string>
+    <string name="pravoslavni_kalendar">Православни календар</string>
 </resources>

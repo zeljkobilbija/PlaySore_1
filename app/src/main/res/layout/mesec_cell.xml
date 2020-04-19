@@ -17,6 +17,6 @@
             android:textAlignment="center"
             android:textSize="34sp"
             android:fontFamily="@font/actor"
-            android:textColor="@color/colorSiviText"/>
+            android:textColor="@color/colorBanana"/>
 
 </LinearLayout>

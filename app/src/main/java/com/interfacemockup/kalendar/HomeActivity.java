@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         GlobalnaClassa glob = GlobalnaClassa.getInstance();
-        glob.setPokaziAdMob(true);
+        glob.setPokaziAdMob(false);
 
 
     }
