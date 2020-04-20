@@ -1,14 +1,10 @@
 package com.interfacemockup.kalendar;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import com.interfacemockup.kalendar.GlobalnaClassa;
 
-import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniKalendar;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
