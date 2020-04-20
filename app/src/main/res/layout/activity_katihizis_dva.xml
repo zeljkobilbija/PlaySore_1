@@ -6,46 +6,25 @@
     android:layout_height="match_parent"
     android:background="@color/colorBraon"
     tools:context="com.interfacemockup.kalendar.KatihizisDva">
-    <ImageView
-        android:id="@+id/id_back_kat_dva"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:padding="5dp"
-        android:background="@drawable/back_btn"
-        android:backgroundTint="@color/colorBanana"
-        android:src="@drawable/ic_arrow_back_48px"
-        android:contentDescription="@string/back_btn_info_activity"
-        android:onClick="nazad_na_main"/>
 
     <ListView
         android:id="@+id/id_katihizis_pitanja"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
         android:dividerHeight="4dp"
-        app:layout_constraintTop_toBottomOf="@+id/id_back_kat_dva"
-        android:layout_marginTop="56dp"
-        android:scrollbars="vertical"
-        android:layout_marginLeft="8dp"
         android:scrollbarThumbVertical="@color/colorOrange"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-    </ListView>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="8dp"
         android:text="@string/katihizis"
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
@@ -53,7 +32,9 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/id_katihizis_pitanja"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/id_back_kat_dva"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -27,7 +27,7 @@
     <string name="naziv_meseca">Naziv Meseca</string>
     <string name="ime_svetitelja">Ime Svetitelja</string>
     <string name="datum">21. januar 2020 god.</string>
-    <string name="info_text">Хвала Вам што сте изабрали ову апикацију која ће Вам бити од користи надам се, а такође се надам да је довољно добро направљена и да ћете је користити на обострано задовољство. Очекујем ваше реакције, примедбе и предлоге а ради побољшања исте. Свако добро.</string>
+    <string name="info_text">Православни Црквени Календар\nПравославац\n\nНадам се да ће Вам овај Православни Црквени календар бити од користи и да ћете бити задобољни њиме и често га употребљавати.Очекујем ваше реакције, примедбе и предлоге а ради побољшања Црквеног календара. Свако добро Вам желим.\n</string>
     <string name="back_btn_info_activity">Back btn info activity</string>
     <string name="title_molitve_list">Items</string>
     <string name="title_molitve_detail">Molitve Detail</string>
@@ -45,4 +45,5 @@
     <string name="molitve">Молитве</string>
     <string name="cyrillicPravoslavac">ПРАВОСЛАВАЦ</string>
     <string name="pravoslavni_kalendar">Православни календар</string>
+    <string name="slika_svetitelja">slika_svetitelja</string>
 </resources>
