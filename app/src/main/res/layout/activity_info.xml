@@ -35,7 +35,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorBanana"
         android:textSize="14sp"
-        android:fontFamily="@font_d/mirosln"
+        android:fontFamily="@font/mirosln"
         app:layout_constraintBottom_toTopOf="@+id/reklama"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

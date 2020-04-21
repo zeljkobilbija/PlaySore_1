@@ -37,7 +37,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
         android:textSize="22sp"
-        android:fontFamily="@font_d/mirosln"
+        android:fontFamily="@font/mirosln"
         app:layout_constraintBottom_toTopOf="@+id/idDvanaestMeseciListView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

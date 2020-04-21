@@ -18,7 +18,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
         android:textSize="22sp"
-        android:fontFamily="@font_d/mirosln"
+        android:fontFamily="@font/mirosln"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/id_Trideset_dana_ListView"
         app:layout_constraintEnd_toEndOf="parent"

@@ -12,7 +12,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Medium Text"
-            android:fontFamily="@font_d/mirosln"
+        android:fontFamily="@font/mirosln"
             android:textAlignment="center"
             android:textSize="34sp"
 

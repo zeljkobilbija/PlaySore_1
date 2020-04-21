@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="@string/molitve"
-        android:fontFamily="@font_d/mirosln"
+        android:fontFamily="@font/mirosln"
         android:layout_margin="8dp"
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"

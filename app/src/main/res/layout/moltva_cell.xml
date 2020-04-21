@@ -29,7 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_marginStart="4dp"
-        android:fontFamily="@font_d/mirosln"
+        android:fontFamily="@font/mirosln"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/medium_text_molitva"
