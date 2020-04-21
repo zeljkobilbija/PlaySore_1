@@ -12,5 +12,7 @@
     <color name="colorZeleno">#40C61C</color>
     <color name="colorSvetloPlavo">#94C4E7</color>
     <color name="colorBraon">#1A1818</color>
-    <color name="colorBanana">#BC9432</color>
+    <color name="colorBanana">#f5b616</color>
+    <color name="colorBanana2">#f5b616</color>
+    <color name="bananaOriginal">#e3bd5d</color>
 </resources>
