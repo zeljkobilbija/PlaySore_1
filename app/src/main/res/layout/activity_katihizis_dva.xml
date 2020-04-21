@@ -29,7 +29,7 @@
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
         android:textSize="22sp"
-        android:fontFamily="@font/mirosln"
+        android:fontFamily="@font_d/mirosln"
         app:layout_constraintBottom_toTopOf="@+id/id_katihizis_pitanja"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.17"

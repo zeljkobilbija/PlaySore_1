@@ -34,7 +34,7 @@
         android:textAlignment="textStart"
         android:textColor="@color/colorBanana"
         android:textSize="20sp"
-        android:fontFamily="@font/mirosln"
+        android:fontFamily="@font_d/mirosln"
         app:layout_constraintBottom_toTopOf="@id/id_kat_detail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

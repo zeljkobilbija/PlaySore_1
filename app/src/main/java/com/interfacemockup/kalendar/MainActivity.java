@@ -3,7 +3,9 @@ package com.interfacemockup.kalendar;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.icu.util.Calendar;
 import android.icu.util.GregorianCalendar;
 import android.net.Uri;
@@ -79,35 +81,34 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 
-        //new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
-
         GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
-       // Log.d("Token", "...    " + FirebaseInstanceId.getInstance().getToken());
         FirebaseInstanceId.getInstance().getInstanceId();
         FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
         addNekiKlinac();
-        //findMessageToken();
+
+
+
+
 
         _counter = 0;
         _calendar = GregorianCalendar.getInstance();
         shared_kalendar_instance = PravoslavniKalendar.getInstance();
         _konstante = new PravoslavneKonstante();
         _rb_danaUgodini = shared_kalendar_instance.vratiBrojDana(_counter);
-
         _view = findViewById(R.id.bgView);
-
-        //_kalendarImage = findViewById(R.id.id_kalendar_imageA);
-        //_infoImage = findViewById(R.id.id_kalendar_imageE);
-
         _postLabel = findViewById(R.id.idPostLabe);
         _gregorijanskiDatumLabel = findViewById(R.id.idGregorijanskiDatumLabel);
         _ikona = findViewById(R.id.idIkona);
         _svetitelj = findViewById(R.id.idSvetacLabel);
         _julijanskiDatumLabel = findViewById(R.id.idJulijanskiDatumLabel);
 
+        Typeface miroslavFont = Typeface.createFromAsset(getAssets(), "font_d/mirosln.ttf");
+        _postLabel.setTypeface(miroslavFont);
+        _gregorijanskiDatumLabel.setTypeface(miroslavFont);
+        _svetitelj.setTypeface(miroslavFont);
+        _julijanskiDatumLabel.setTypeface(miroslavFont);
 
 
         setUI(_counter);
@@ -117,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
     @Override
     protected void onPause() {

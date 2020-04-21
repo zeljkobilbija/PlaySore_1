@@ -26,12 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="@string/molitve"
-        android:fontFamily="@font/mirosln"
+        android:fontFamily="@font_d/mirosln"
         android:layout_margin="8dp"
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
         android:textSize="22sp"
-        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
