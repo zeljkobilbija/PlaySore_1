@@ -32,7 +32,7 @@
         android:fontFamily="@font/actor"
         android:gravity="center"
         android:padding="10dp"
-        android:text="Medium Text molitva"
+        android:text="@string/medium_text_molitva"
         android:textAlignment="center"
         android:textColor="@color/colorBanana"
         android:textSize="16sp"
