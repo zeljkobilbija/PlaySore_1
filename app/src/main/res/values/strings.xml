@@ -43,7 +43,8 @@
     <string name="dnevna_ikona">dnevna ikona</string>
     <string name="post_ili_ne">Post ili ne</string>
     <string name="molitve">Молитве</string>
-    <string name="cyrillicPravoslavac">ПРАВОСЛАВАЦ</string>
-    <string name="pravoslavni_kalendar">Православни календар</string>
+    <string name="cyrillicPravoslavac">Православац</string>
+    <string name="pravoslavni_kalendar">Православни Црквени Календар</string>
     <string name="slika_svetitelja">slika_svetitelja</string>
+    <string name="medium_text_molitva">Medium Text molitva</string>
 </resources>

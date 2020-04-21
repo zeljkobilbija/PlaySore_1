@@ -26,8 +26,7 @@
            android:layout_height="32dp"
            android:textAlignment="center"
            android:textSize="22sp"
-           android:fontFamily="@font/actor"
-           android:textStyle="italic"
+          android:fontFamily="@font/mirosln"
            android:textColor="@color/colorBanana"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintEnd_toEndOf="parent"
@@ -41,27 +40,25 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textAlignment="center"
-           android:textStyle="italic"
+           android:fontFamily="@font/mirosln"
            android:textSize="20sp"
            android:textColor="@color/colorSiviText"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idPostLabe"
-           android:layout_marginTop="8dp"
-           android:fontFamily="@font/actor"/>
+           android:layout_marginTop="8dp" />
    <TextView
            android:id="@+id/idGregTextView"
            android:text="@string/novi_gregorijanski_datum"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:textSize="14sp"
-           android:textStyle="italic"
+           android:fontFamily="@font/mirosln"
            android:textColor="@color/colorTamnoSivo"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idGregorijanskiDatumLabel"
-           android:layout_marginTop="4dp"
-            android:fontFamily="@font/actor"/>
+           android:layout_marginTop="4dp"/>
 
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavnaIkona
@@ -75,22 +72,21 @@
            android:layout_marginTop="22dp"/>
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniSvetacLabel
-           android:id="@+id/idSvetacLabel"
-           android:text="@string/svetac_label"
-           android:layout_width="match_parent"
-           android:layout_height="76dp"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/idIkona"
-           android:layout_marginTop="16dp"
-           android:textAlignment="center"
-           android:textStyle="italic"
-           android:textSize="20sp"
-           android:textColor="@color/colorSiviText"
-           android:lines="3"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-           android:fontFamily="@font/actor"/>
+       android:id="@+id/idSvetacLabel"
+       android:layout_width="match_parent"
+       android:layout_height="76dp"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="16dp"
+       android:layout_marginEnd="16dp"
+       android:fontFamily="@font/mirosln"
+       android:lines="3"
+       android:text="@string/svetac_label"
+       android:textAlignment="center"
+       android:textColor="@color/colorSiviText"
+       android:textSize="20sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/idIkona" />
 
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniJulijanskiDatumLabel
@@ -100,13 +96,12 @@
            android:layout_height="28dp"
            android:textAlignment="center"
            android:textSize="18sp"
-           android:textStyle="italic"
+           android:fontFamily="@font/mirosln"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idSvetacLabel"
            android:layout_marginTop="16dp"
-           android:textColor="@color/colorBanana"
-       android:fontFamily="@font/actor"/>
+           android:textColor="@color/colorBanana" />
 
    <TextView
            android:id="@+id/idJulTextView"
@@ -115,12 +110,11 @@
            android:layout_height="wrap_content"
            android:textColor="@color/colorTamnoSivo"
            android:textSize="14sp"
-           android:textStyle="italic"
+           android:fontFamily="@font/mirosln"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idJulijanskiDatumLabel"
-           android:layout_marginTop="4dp"
-           android:fontFamily="@font/actor"/>
+           android:layout_marginTop="4dp"/>
 
 
    <LinearLayout
