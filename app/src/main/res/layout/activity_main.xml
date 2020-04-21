@@ -63,8 +63,8 @@
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavnaIkona
            android:id="@+id/idIkona"
-           android:layout_width="145dp"
-           android:layout_height="198dp"
+           android:layout_width="117dp"
+           android:layout_height="162dp"
            android:src="@drawable/ik_24"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
