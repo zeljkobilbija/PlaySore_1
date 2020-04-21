@@ -104,11 +104,11 @@ public class MainActivity extends AppCompatActivity {
         _svetitelj = findViewById(R.id.idSvetacLabel);
         _julijanskiDatumLabel = findViewById(R.id.idJulijanskiDatumLabel);
 
-        Typeface miroslavFont = Typeface.createFromAsset(getAssets(), "font_d/mirosln.ttf");
+/*        Typeface miroslavFont = Typeface.createFromAsset(getAssets(), "font_d/mirosln.ttf");
         _postLabel.setTypeface(miroslavFont);
         _gregorijanskiDatumLabel.setTypeface(miroslavFont);
         _svetitelj.setTypeface(miroslavFont);
-        _julijanskiDatumLabel.setTypeface(miroslavFont);
+        _julijanskiDatumLabel.setTypeface(miroslavFont);*/
 
 
         setUI(_counter);
