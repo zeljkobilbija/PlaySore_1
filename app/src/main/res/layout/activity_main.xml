@@ -10,43 +10,45 @@
         tools:ignore="ExtraText">
 
 
-    <View
-        android:id="@+id/bgView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorBraon"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="1dp" />
+   <View
+       android:id="@+id/bgView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@color/colorBraon"
+       tools:ignore="MissingConstraints"
+       tools:layout_editor_absoluteX="0dp"
+       tools:layout_editor_absoluteY="1dp" />
 
-    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel
-           android:id="@+id/idPostLabe"
-           android:text="@string/pravoslavnipostlabel"
-           android:layout_width="wrap_content"
-           android:layout_height="32dp"
-           android:textAlignment="center"
-           android:textSize="22sp"
-        android:fontFamily="@font/mirosln"
-           android:textColor="@color/colorBanana"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintTop_toTopOf="@+id/bgView"
-           android:layout_marginTop="24dp"/>
+   <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel
+       android:id="@+id/idPostLabe"
+       android:layout_width="wrap_content"
+       android:layout_height="32dp"
+       android:layout_marginTop="16dp"
+       android:fontFamily="@font/mirosln"
+       android:text="@string/pravoslavnipostlabel"
+       android:textAlignment="center"
+       android:gravity="center"
+       android:textColor="@color/colorBanana"
+       android:textSize="22sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/bgView" />
 
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniGregorijanskiDatumLabel
-           android:id="@+id/idGregorijanskiDatumLabel"
-           android:text="@string/gregDatum"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textAlignment="center"
-           android:textSize="20sp"
-           android:textColor="@color/colorSiviText"
+       android:id="@+id/idGregorijanskiDatumLabel"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="4dp"
        android:fontFamily="@font/mirosln"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/idPostLabe"
-           android:layout_marginTop="8dp" />
+       android:text="@string/gregDatum"
+       android:textAlignment="center"
+       android:gravity="center"
+       android:textColor="@color/colorSiviText"
+       android:textSize="20sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/idPostLabe" />
    <TextView
            android:id="@+id/idGregTextView"
            android:text="@string/novi_gregorijanski_datum"
@@ -54,7 +56,9 @@
            android:layout_height="wrap_content"
            android:textSize="14sp"
            android:textColor="@color/colorTamnoSivo"
-       android:fontFamily="@font/mirosln"
+           android:fontFamily="@font/mirosln"
+           android:textAlignment="center"
+           android:gravity="center"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idGregorijanskiDatumLabel"
@@ -62,26 +66,27 @@
 
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavnaIkona
-           android:id="@+id/idIkona"
-           android:layout_width="117dp"
-           android:layout_height="162dp"
-           android:src="@drawable/ik_24"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/idGregTextView"
-           android:layout_marginTop="22dp"/>
+       android:id="@+id/idIkona"
+       android:layout_width="117dp"
+       android:layout_height="162dp"
+       android:layout_marginTop="8dp"
+       android:src="@drawable/ik_24"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/idGregTextView" />
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniSvetacLabel
        android:id="@+id/idSvetacLabel"
        android:layout_width="match_parent"
        android:layout_height="76dp"
        android:layout_marginStart="16dp"
-       android:layout_marginTop="16dp"
+       android:layout_marginTop="4dp"
        android:layout_marginEnd="16dp"
+       android:fontFamily="@font/mirosln"
        android:lines="3"
        android:text="@string/svetac_label"
-       android:fontFamily="@font/mirosln"
        android:textAlignment="center"
+       android:gravity="center"
        android:textColor="@color/colorSiviText"
        android:textSize="20sp"
        app:layout_constraintEnd_toEndOf="parent"
@@ -90,18 +95,19 @@
 
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniJulijanskiDatumLabel
-           android:id="@+id/idJulijanskiDatumLabel"
-           android:text="@string/julijanski_datum"
-           android:layout_width="wrap_content"
-           android:layout_height="28dp"
-           android:textAlignment="center"
-           android:textSize="18sp"
+       android:id="@+id/idJulijanskiDatumLabel"
+       android:layout_width="wrap_content"
+       android:layout_height="28dp"
+       android:layout_marginTop="4dp"
        android:fontFamily="@font/mirosln"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/idSvetacLabel"
-           android:layout_marginTop="16dp"
-           android:textColor="@color/colorBanana" />
+       android:text="@string/julijanski_datum"
+       android:textAlignment="center"
+       android:gravity="center"
+       android:textColor="@color/colorBanana"
+       android:textSize="18sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/idSvetacLabel" />
 
    <TextView
            android:id="@+id/idJulTextView"
@@ -110,7 +116,9 @@
            android:layout_height="wrap_content"
            android:textColor="@color/colorTamnoSivo"
            android:textSize="14sp"
-       android:fontFamily="@font/mirosln"
+           android:textAlignment="center"
+           android:gravity="center"
+           android:fontFamily="@font/mirosln"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@+id/idJulijanskiDatumLabel"
@@ -118,11 +126,12 @@
 
 
    <LinearLayout
+           android:id="@+id/id_prvi_linear_layout"
            android:orientation="horizontal"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            app:layout_constraintTop_toBottomOf="@+id/idJulTextView"
-           android:layout_marginTop="24dp"
+           android:layout_marginTop="10dp"
            app:layout_constraintEnd_toEndOf="parent"
            app:layout_constraintStart_toStartOf="parent"
            android:layout_marginStart="16dp"
@@ -135,7 +144,7 @@
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:background="@drawable/back_btn_big"
-              android:layout_margin="10dp"
+              android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriKalendar"
           android:backgroundTint="@color/colorBanana"
@@ -149,7 +158,7 @@
               android:contentDescription="@string/katihizis_image"
               android:background="@drawable/back_btn_big"
               android:backgroundTint="@color/colorBanana"
-              android:layout_margin="10dp"
+          android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriKatihizis"
               android:src="@drawable/ic_book_48px">
@@ -161,7 +170,7 @@
               android:layout_height="50dp"
               android:contentDescription="@string/share_image"
               android:background="@drawable/back_btn_big"
-              android:layout_margin="10dp"
+          android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="sharePravoslavca"
               android:backgroundTint="@color/colorBanana"
@@ -175,7 +184,7 @@
               android:contentDescription="@string/molitva_image"
               android:background="@drawable/back_btn_big"
               android:backgroundTint="@color/colorBanana"
-              android:layout_margin="10dp"
+          android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriMolitvenik"
               android:src="@drawable/ic_pan_tool_48px">
@@ -189,7 +198,7 @@
               android:contentDescription="@string/info_image"
               android:background="@drawable/back_btn_big"
               android:backgroundTint="@color/colorBanana"
-              android:layout_margin="10dp"
+          android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriInfo"
               android:src="@drawable/ic_info_48px">
@@ -197,6 +206,74 @@
       </ImageView>
 
    </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/id_drugi_linear_layout"
+       android:orientation="horizontal"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@+id/id_prvi_linear_layout"
+       android:layout_marginTop="10dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginStart="16dp"
+       android:layout_marginEnd="16dp">
+
+      <ImageView
+          android:id="@+id/id_A"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:contentDescription="@string/info_image"
+          android:background="@drawable/pozadina_ikone_dva"
+          android:layout_margin="5dp"
+          android:padding="5dp"
+          android:src="@drawable/torta"/>
+      <ImageView
+          android:id="@+id/id_B"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:contentDescription="@string/info_image"
+          android:background="@drawable/back_btn_big"
+          android:backgroundTint="@color/colorBanana"
+          android:layout_margin="5dp"
+          android:padding="5dp"
+          android:visibility="invisible"
+          android:src="@drawable/ic_info_48px"/>
+      <ImageView
+          android:id="@+id/id_C"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:contentDescription="@string/info_image"
+          android:background="@drawable/back_btn_big"
+          android:backgroundTint="@color/colorBanana"
+          android:layout_margin="5dp"
+          android:padding="5dp"
+          android:visibility="invisible"
+          android:src="@drawable/ic_info_48px"/>
+      <ImageView
+          android:id="@+id/id_D"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:contentDescription="@string/info_image"
+          android:background="@drawable/back_btn_big"
+          android:backgroundTint="@color/colorBanana"
+          android:layout_margin="5dp"
+          android:padding="5dp"
+          android:visibility="invisible"
+          android:src="@drawable/ic_info_48px"/>
+      <ImageView
+          android:id="@+id/id_E"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:contentDescription="@string/info_image"
+          android:backgroundTint="@color/colorBanana"
+          android:layout_margin="5dp"
+          android:padding="5dp"
+          android:src="@drawable/batak"/>
+
+   </LinearLayout>
+
+
    <com.google.android.gms.ads.AdView
            android:id="@+id/adView"
            android:layout_width="wrap_content"
