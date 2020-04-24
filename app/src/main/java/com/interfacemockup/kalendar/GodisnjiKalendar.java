@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.*;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

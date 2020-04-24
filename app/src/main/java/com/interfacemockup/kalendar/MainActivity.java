@@ -345,7 +345,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void otvoriTortu(View view) {
-
+        Intent intent = new Intent(this, Obicaji.class);
+        startActivity(intent);
     }
 }
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string-array name="spisak_obicaja">
+		<item> Начин поста </item>
+		<item> О Крсној Слави </item>
+		<item> Слава код Срба </item>
+		<item> Слављење Славе у прошлости </item>
+		<item> Како треба да славимо славу? </item>
+		<item> Шта је потребно припремити за прослављање Крсног Имена - Славе? </item>
+		<item> Уочи Славе </item>
+		<item> На дан Славе </item>
+		<item> Дизање крсне славе при ломљењу колача по народном обичају, звана Славарица </item>
+		<item> Детињци </item>
+		<item> Материце </item>
+		<item> Оци или Очеви </item>
+		<item> Туциндан </item>
+		<item> БАДЊИ ДАН </item>
+		<item> БАДЊЕ ВЕЧЕ </item>
+		<item> БОЖИЋНИ ПРАЗНИЦИ И ОБИЧАЈИ </item>
+		<item> ВАСКРС </item>
+		<item> КРШТЕЊЕ </item>
+		<item> Ословљавање и поздрављање </item>
+		<item> Понашање у Храму </item>
+		<item> Како се целивају иконе? </item>
+		<item> Понашање на богослужењу </item>
+		<item> Како се правилно крстити? </item>
+		<item> Нафора </item>
+		<item> Одевање </item>
+		<item> Празници посвећени мртвима </item>
+	</string-array>
+</resources>
