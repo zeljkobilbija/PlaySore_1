@@ -344,6 +344,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void otvoriTortu(View view) {
+
+    }
 }
 
 

@@ -227,7 +227,9 @@
           android:background="@drawable/pozadina_ikone_dva"
           android:layout_margin="5dp"
           android:padding="5dp"
-          android:src="@drawable/torta"/>
+          android:src="@drawable/torta"
+          android:visibility="invisible"
+      android:onClick="otvoriTortu"/>
       <ImageView
           android:id="@+id/id_B"
           android:layout_width="50dp"
@@ -269,6 +271,7 @@
           android:backgroundTint="@color/colorBanana"
           android:layout_margin="5dp"
           android:padding="5dp"
+          android:visibility="invisible"
           android:src="@drawable/batak"/>
 
    </LinearLayout>

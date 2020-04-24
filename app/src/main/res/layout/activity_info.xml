@@ -9,20 +9,19 @@
         tools:context="com.interfacemockup.kalendar.Info">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="50dp"
-        android:background="@color/colorBraon"
-        android:contentDescription="@string/todo"
-        android:src="@drawable/jesus"
-        app:civ_border_color="@color/colorBanana"
-        app:civ_border_width="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@color/colorBraon"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/jesus"
+            app:civ_border_color="@color/colorBanana"
+            app:civ_border_width="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="24dp"
+            app:layout_constraintHorizontal_bias="0.498">
     </de.hdodenhof.circleimageview.CircleImageView>
-
     <TextView
         android:id="@+id/id_info_editText"
         android:layout_width="match_parent"
