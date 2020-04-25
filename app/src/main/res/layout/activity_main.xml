@@ -174,7 +174,7 @@
               android:padding="5dp"
               android:onClick="sharePravoslavca"
               android:backgroundTint="@color/colorBanana"
-              android:src="@drawable/ic_share_48px">
+          android:src="@drawable/ic_assignment_turned_in_48px">
 
       </ImageView>
       <ImageView
@@ -228,6 +228,7 @@
           android:padding="5dp"
           android:background="@drawable/back_btn_big"
           android:backgroundTint="@color/colorBanana"
+          android:visibility="invisible"
           android:src="@drawable/ic_assignment_turned_in_48px"
       android:onClick="otvoriTortu"/>
       <ImageView
@@ -250,8 +251,8 @@
           android:backgroundTint="@color/colorBanana"
           android:layout_margin="5dp"
           android:padding="5dp"
-          android:visibility="invisible"
-          android:src="@drawable/ic_info_48px"/>
+          android:src="@drawable/ic_share_48px"
+          android:onClick="obicaji_open"/>
       <ImageView
           android:id="@+id/id_D"
           android:layout_width="50dp"
@@ -272,7 +273,7 @@
           android:layout_margin="5dp"
           android:padding="5dp"
           android:visibility="invisible"
-          android:src="@drawable/batak"/>
+          android:src="@drawable/ic_assignment_turned_in_48px"/>
 
    </LinearLayout>
 

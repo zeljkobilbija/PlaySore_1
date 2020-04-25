@@ -30,9 +30,9 @@ public class MyCustomArrayAdapter extends ArrayAdapter<Item> {
         View v = convertView;
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         v = inflater.inflate(R.layout.dan_cell, null);
-        TextView textView = (TextView) v.findViewById(R.id.id_ime_svetitelja);
-        ImageView imageView = (ImageView) v.findViewById(R.id.id_ikona_svetitelja);
-        TextView datumText = (TextView) v.findViewById(R.id.id_datum);
+        TextView textView = v.findViewById(R.id.id_ime_svetitelja);
+        ImageView imageView = v.findViewById(R.id.id_ikona_svetitelja);
+        TextView datumText = v.findViewById(R.id.id_datum);
         textView.setText(listaSvetaca.get(position).getSvetacName());
         imageView.setImageResource(listaSvetaca.get(position).getSvetacImage());
         datumText.setText(listaSvetaca.get(position).getdatum());

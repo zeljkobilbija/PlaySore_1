@@ -323,13 +323,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sharePravoslavca(View view) {
 
-        Uri link = DynamicLinksUtil.generateContentLink();
-
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT, link.toString());
-
-        startActivity(Intent.createChooser(intent, "Поделите апикацију Православац, Српски Православни Календар са својим пријатељима"));
+        Intent intent = new Intent(this, Obicaji.class);
+        startActivity(intent);
 
     }
 
@@ -345,8 +340,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void otvoriTortu(View view) {
-        Intent intent = new Intent(this, Obicaji.class);
-        startActivity(intent);
+
+    }
+
+    public void obicaji_open(View view) {
+        
+        Uri link = DynamicLinksUtil.generateContentLink();
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, link.toString());
+
+        startActivity(Intent.createChooser(intent, "Поделите апикацију Православац, Српски Православни Календар са својим пријатељима"));
     }
 }
 

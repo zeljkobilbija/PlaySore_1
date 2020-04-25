@@ -34,10 +34,10 @@ public class CustomArrayAdapterDva extends ArrayAdapter<Item2> {
         View v = convertView;
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         v = inflater.inflate(R.layout.dan_dan_cell, null);
-        TextView postLabel = (TextView)v.findViewById(R.id.id_post_label);
-        TextView textView = (TextView) v.findViewById(R.id.id_svetitelj_dnevni);
-        ImageView imageView = (ImageView) v.findViewById(R.id.id_ikona_dnevna);
-        TextView datumText = (TextView) v.findViewById(R.id.id_datum_label);
+        TextView postLabel = v.findViewById(R.id.id_post_label);
+        TextView textView = v.findViewById(R.id.id_svetitelj_dnevni);
+        ImageView imageView = v.findViewById(R.id.id_ikona_dnevna);
+        TextView datumText = v.findViewById(R.id.id_datum_label);
         postLabel.setText(listaSvetaca.get(position).getPost());
         textView.setText(listaSvetaca.get(position).getSvetacName());
         imageView.setImageResource(listaSvetaca.get(position).getSvetacImage());
