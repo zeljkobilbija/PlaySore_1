@@ -48,6 +48,7 @@ public class NektarijeDetail extends AppCompatActivity {
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
+
             }
         });
         mAdView = findViewById(R.id.adMolitva);
