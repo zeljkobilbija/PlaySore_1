@@ -19,6 +19,7 @@ public class NektarijeDetail extends AppCompatActivity {
     private PravoslavneKonstante _konst;
     private int _counter;
 
+    private TextView _naslov;
     private AdView mAdView;
 
     @Override
@@ -28,7 +29,8 @@ public class NektarijeDetail extends AppCompatActivity {
 
         _counter = getIntent().getIntExtra("nektarije", 0);
        // MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
-
+        _naslov = findViewById(R.id.naslov_molive);
+        _naslov.setText(getResources().getStringArray(R.array.spisak_vrlina)[_counter]);
 
         _molitva = findViewById(R.id.id_text_molitve);
         // _molitva.setText(_konst.molitveTekst[_counter]);
