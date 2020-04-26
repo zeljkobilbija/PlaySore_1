@@ -7,24 +7,40 @@
     android:background="@color/colorBraon"
     tools:context="com.interfacemockup.kalendar.MoltvaDetail">
 
+    <TextView
+            android:id="@+id/naslov_molive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="molitva"
+            android:fontFamily="@font/mirosln"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@color/colorSiviText"
+            android:layout_margin="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+
 
     <TextView
-        android:id="@+id/id_text_molitve"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:fontFamily="@font/mirosln"
-        android:padding="10dp"
-        android:scrollbarThumbVertical="@color/colorOrange"
-        android:scrollbars="vertical"
-        android:text="@string/ime_svetitelja"
-        android:textAlignment="textStart"
-        android:textColor="@color/colorBanana"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/adMolitva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/id_text_molitve"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="@font/mirosln"
+            android:padding="10dp"
+            android:layout_margin="8dp"
+            android:scrollbarThumbVertical="@color/colorOrange"
+            android:scrollbars="vertical"
+            android:text="@string/ime_svetitelja"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorBanana"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/naslov_molive"
+            app:layout_constraintBottom_toTopOf="@+id/adMolitva" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginTop="16dp" android:layout_marginBottom="16dp"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adMolitva"

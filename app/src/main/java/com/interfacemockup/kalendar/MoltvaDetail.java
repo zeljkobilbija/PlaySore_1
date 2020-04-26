@@ -18,6 +18,7 @@ import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
 public class MoltvaDetail extends AppCompatActivity {
 
     private TextView _molitva;
+    private TextView _naslov_moliyve;
     private PravoslavneKonstante _konst;
     private int _counter;
 
@@ -33,8 +34,11 @@ public class MoltvaDetail extends AppCompatActivity {
 
         _konst = new PravoslavneKonstante();
         _molitva = findViewById(R.id.id_text_molitve);
+        _naslov_moliyve = findViewById(R.id.naslov_molive);
        // _molitva.setText(_konst.molitveTekst[_counter]);
         _molitva.setText(getResources().getStringArray(R.array.molitve_tekst)[_counter]);
+        _naslov_moliyve.setText(getResources().getStringArray(R.array.molitve)[_counter]);
+
         _molitva.setMovementMethod(new ScrollingMovementMethod());
 
         if (GlobalnaClassa.getInstance().getPokaziAdMob()){
