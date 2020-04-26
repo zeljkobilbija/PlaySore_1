@@ -341,6 +341,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void otvoriTortu(View view) {
 
+        Intent intent = new Intent(this, NektarijeSpisak.class);
+        startActivity(intent);
+
     }
 
     public void obicaji_open(View view) {

@@ -228,8 +228,7 @@
           android:padding="5dp"
           android:background="@drawable/back_btn_big"
           android:backgroundTint="@color/colorBanana"
-          android:visibility="invisible"
-          android:src="@drawable/ic_assignment_turned_in_48px"
+          android:src="@drawable/ic_content_paste_48px"
       android:onClick="otvoriTortu"/>
       <ImageView
           android:id="@+id/id_B"

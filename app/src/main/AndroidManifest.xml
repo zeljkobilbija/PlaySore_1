@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ObicajiDetail"></activity>
+        <activity android:name=".NektarijeDetail"></activity>
+        <activity android:name=".NektarijeSpisak" />
+        <activity android:name=".ObicajiDetail" />
         <activity
             android:name=".Obicaji"
             android:screenOrientation="portrait"
