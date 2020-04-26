@@ -9,22 +9,22 @@
 
 
     <TextView
-        android:id="@+id/id_text_molitve"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:fontFamily="@font/mirosln"
-        android:padding="10dp"
-        android:scrollbarThumbVertical="@color/colorOrange"
-        android:scrollbars="vertical"
-        android:text="@string/ime_svetitelja"
-        android:textAlignment="textStart"
-        android:textColor="@color/colorBanana"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/adMolitva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/id_text_molitve"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/mirosln"
+            android:padding="10dp"
+            android:scrollbarThumbVertical="@color/colorOrange"
+            android:scrollbars="vertical"
+            android:text="@string/ime_svetitelja"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorBanana"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/adMolitva"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adMolitva"
