@@ -44,6 +44,7 @@ import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.*;
+import hotchemi.android.rate.AppRate;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        rateApp();
 
         _counter = 0;
         _calendar = GregorianCalendar.getInstance();
@@ -356,6 +357,23 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(Intent.createChooser(intent, "Поделите апикацију Православац, Српски Православни Календар са својим пријатељима"));
     }
+
+    private void rateApp(){
+        AppRate.with(this)
+                .setInstallDays(3)
+                .setLaunchTimes(5)
+                .setTitle("Оцените Православни Календар")
+                .setMessage("Ако сте задовољни и ако желите можете дати оцену за ”Православни Календар - Православац” на Play Store.")
+                .setTextLater("Оценићу касније")
+                .setTextRateNow("Оценићу сада")
+                .setTextNever("Не, хвала")
+                .setShowNeverButton(false)
+                .setRemindInterval(5)
+                .monitor();
+
+        AppRate.showRateDialogIfMeetsConditions(this);
+    }
+
 }
 
 
