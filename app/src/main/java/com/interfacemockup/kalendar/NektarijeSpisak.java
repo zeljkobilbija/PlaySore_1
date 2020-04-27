@@ -23,7 +23,7 @@ public class NektarijeSpisak extends AppCompatActivity {
         setContentView(R.layout.activity_molitve);
 
         _naslov = findViewById(R.id.textView2);
-        _naslov.setText(" Nektarije Eginski ");
+        _naslov.setText("Свети Нектарије Егински");
         listView = findViewById(R.id.idMolitveListView);
         textView = findViewById(R.id.id_moltva_cell_textView);
         //listItem = konstante.molitveNazivi;
@@ -37,13 +37,14 @@ public class NektarijeSpisak extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-
                 Intent intent = new Intent(NektarijeSpisak.this, NektarijeDetail.class);
                 intent.putExtra("nektarije", position);
                 startActivity(intent);
             }
-        });
+        });//setOnItemClickListeners
 
 
-    }
-}
+    }// onCreate()
+
+
+}// class
