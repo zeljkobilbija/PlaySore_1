@@ -363,7 +363,7 @@ public class MainActivity extends AppCompatActivity {
                 .setInstallDays(3)
                 .setLaunchTimes(5)
                 .setTitle("Оцените Православни Календар")
-                .setMessage("Ако сте задовољни и ако желите можете дати оцену за ”Православни Календар - Православац” на Play Store.")
+                .setMessage("Да ли би сте оценили ову апликацији ако сте задовољни са њом? То би вам одузело само неколико тренутака. Захваљујем се на вашој подршци!")
                 .setTextLater("Оценићу касније")
                 .setTextRateNow("Оценићу сада")
                 .setTextNever("Не, хвала")
