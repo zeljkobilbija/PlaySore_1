@@ -1,7 +1,8 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'  // Google Services plugin
 apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
 
 android {
     compileSdkVersion 29
@@ -31,9 +32,11 @@ dependencies {
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
 
     // Add the Firebase SDK for Google Analytics
-    implementation 'com.google.firebase:firebase-analytics:17.3.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.0'
+
     // Add the Firebase SDK for Crashlytics.
     implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta04'
+
     // Add the SDKs for any other Firebase products you want to use in your app
     // For example, to use Firebase Authentication and Cloud Firestore
     implementation 'com.google.firebase:firebase-auth:19.3.0'
@@ -54,3 +57,6 @@ dependencies {
 
     implementation 'com.github.hotchemi:android-rate:1.0.1'
 }
+
+
+

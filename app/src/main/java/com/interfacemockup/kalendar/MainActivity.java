@@ -1,6 +1,5 @@
 package com.interfacemockup.kalendar;
 
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -49,12 +48,10 @@ import hotchemi.android.rate.AppRate;
 import java.util.Arrays;
 import java.util.HashMap;
 
-
 public class MainActivity extends AppCompatActivity {
 
    // private static final String TAG = "MyActivity";
-   private FirebaseAnalytics mFirebaseAnalytics;
-
+    private FirebaseAnalytics mFirebaseAnalytics;
     private PravoslavniPostLabel _postLabel;
     private PravoslavniGregorijanskiDatumLabel _gregorijanskiDatumLabel;
     private PravoslavnaIkona _ikona;
@@ -82,14 +79,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        Bundle bundle = new Bundle();
+        bundle.putInt(FirebaseAnalytics.Param.ITEM_ID, R.id.id_B);
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, bundle);
+
+      //  bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, contentType);
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "id_C");
+        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SHARE, bundle);
+
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 
         GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
         FirebaseInstanceId.getInstance().getInstanceId();
         FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
         addNekiKlinac();
-
-
 
         rateApp();
 
@@ -105,20 +108,13 @@ public class MainActivity extends AppCompatActivity {
         _svetitelj = findViewById(R.id.idSvetacLabel);
         _julijanskiDatumLabel = findViewById(R.id.idJulijanskiDatumLabel);
 
-/*        Typeface miroslavFont = Typeface.createFromAsset(getAssets(), "font_d/mirosln.ttf");
-        _postLabel.setTypeface(miroslavFont);
-        _gregorijanskiDatumLabel.setTypeface(miroslavFont);
-        _svetitelj.setTypeface(miroslavFont);
-        _julijanskiDatumLabel.setTypeface(miroslavFont);*/
-
-
         setUI(_counter);
-
         setSwipes(_rb_danaUgodini);
 
 
 
-    }
+    }// onCreate
+
 
 
 
@@ -127,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         addNekiKlinac();
     }
+
 
     @Override
     protected void onStop() {
@@ -163,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO: Ova funkcija ispod izgleda nije uopste potrebna osim za pronalazenje tokena
         //findMessageToken();
 
-    }
+    }// setUI
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -177,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
             _ikona.setImageResource(_konstante.drawables_prosta_godina[shared_kalendar_instance.vratiBrojDana(counter) - 1]);
         }
 
-    }
+    }// setIkonu
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void setSvetitelja(int counter){
@@ -190,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
         }
         _svetitelj.setText(imeSvetitelja[shared_kalendar_instance.vratiBrojDana(counter) - 1]);
         _svetitelj.setBojuTexta(counter);
-    }
+    }// setSvetitelja
 
 
 
@@ -254,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-    }
+    }// setSwipes
 
 
     private void addMob(){
@@ -266,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-    }
+    }// adMob
 
 
     private void findMessageToken(){
@@ -290,7 +287,7 @@ public class MainActivity extends AppCompatActivity {
                         //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
+    }// findMessageToken
 
 
     private void addNekiKlinac(){
@@ -307,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         // [END subscribe_topics]
-    }
+    }// adNekiKlinac
 
 
     

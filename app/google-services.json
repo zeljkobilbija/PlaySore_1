@@ -8,6 +8,42 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1021483874969:android:e1d5c96755d7b4ae0d9608",
+        "android_client_info": {
+          "package_name": "com.interfacemockup.kalendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021483874969-lek20uvggq1cm29445cr3ve9vu1doffi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7Khbogy8Fp6lLagHPztsfs3j0AVZXL6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1021483874969-lek20uvggq1cm29445cr3ve9vu1doffi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1021483874969-nnh90ksgnjgihgethc6dklpvlk1c3fna.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iphonemocks.Pravoslavni-Katihizis"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1021483874969:android:10c1b670bde808c40d9608",
         "android_client_info": {
           "package_name": "com.interfacemockup.pravoslavac"
