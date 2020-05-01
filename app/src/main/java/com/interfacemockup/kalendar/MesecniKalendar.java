@@ -301,6 +301,4 @@ public class MesecniKalendar extends AppCompatActivity {
         return imeSvetitelja[RB_Dana_u_God];
     }
 
-
-
 }

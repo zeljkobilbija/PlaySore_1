@@ -42,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         GlobalnaClassa glob = GlobalnaClassa.getInstance();
-        glob.setPokaziAdMob(false);
+        glob.setPokaziAdMob(true);
 
     }
 
