@@ -15,4 +15,9 @@
     <color name="colorBanana">#f5b616</color>
     <color name="colorBanana2">#f5b616</color>
     <color name="bananaOriginal">#e3bd5d</color>
+    <color name="green_dark">#264653</color>
+    <color name="gren_dark_dark">#182C33</color>
+    <color name="color_dark_brown">#39140B</color>
+    <color name="color_dark">#1D0806</color>
+    <color name="color_light_brown">#391D14</color>
 </resources>
