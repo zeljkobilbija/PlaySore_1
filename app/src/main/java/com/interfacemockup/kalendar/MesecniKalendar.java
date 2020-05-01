@@ -36,7 +36,7 @@ public class MesecniKalendar extends AppCompatActivity {
     private PravoslavniSvetacLabel _svetac_label;
     private String postField;
     private TextView nazivMeseca;
-    private MyCustomArrayAdapter adapter;
+    //private MyCustomArrayAdapter adapter;
     private CustomArrayAdapterDva adapterDva;
     private ArrayList<Item> lista;
     private ArrayList<Item2> lista2;

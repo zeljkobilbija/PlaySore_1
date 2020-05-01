@@ -3,9 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="horizontal"
-    android:layout_height="110dp"
-    android:backgroundTint="@color/colorPrimaryDark"
-    android:background="@drawable/linear">
+    android:layout_height="110dp">
 
     <TextView
         android:id="@+id/id_katihizis_cell_textView"
@@ -13,6 +11,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="Medium Text"
+        android:background="@drawable/gradient_pozadina"
         android:fontFamily="@font/mirosln"
         android:padding="10dp"
         android:textSize="18sp"
