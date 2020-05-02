@@ -37,9 +37,9 @@ public class DynamicLinksUtil {
                 .buildDynamicLink();
 
         return link.getUri();
-    }
-    // [END ddl_generate_content_link]
+    }// [END ddl_generate_content_link]
 
-}
+
+} // end class
 
 

@@ -48,7 +48,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-perf:19.0.7'
     implementation 'com.google.firebase:firebase-core:17.4.0'
     implementation 'com.google.firebase:firebase-dynamic-links:19.1.0'
-    // Circle Image>View
+    // Circle ImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
