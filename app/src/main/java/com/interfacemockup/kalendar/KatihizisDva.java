@@ -1,5 +1,6 @@
 package com.interfacemockup.kalendar;
 
+import android.graphics.Color;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +12,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+
 
 public class KatihizisDva extends AppCompatActivity {
 
@@ -27,8 +29,6 @@ public class KatihizisDva extends AppCompatActivity {
         listView = findViewById(R.id.id_katihizis_pitanja);
         textView = findViewById(R.id.id_katihizis_cell_textView);
         listItem = getResources().getStringArray(R.array.katehizis_pitanja);
-
-
                                                                                //cell.xml ffile    //id text viewa iz cell.xml file //resource ffile
         final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.katihizis_cell, R.id.id_katihizis_cell_textView, listItem);
 
