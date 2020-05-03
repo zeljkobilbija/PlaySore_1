@@ -25,14 +25,15 @@ public class NektarijeDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_moltva_detail);
+        setContentView(R.layout.activity_nektarije_detail);
+
+        MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 
         _counter = getIntent().getIntExtra("nektarije", 0);
-       // MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
-        _naslov = findViewById(R.id.naslov_molive);
+        _naslov = findViewById(R.id.naslov_nektarije);
         _naslov.setText(getResources().getStringArray(R.array.spisak_vrlina)[_counter]);
 
-        _molitva = findViewById(R.id.id_text_molitve);
+        _molitva = findViewById(R.id.id_text_nektarijev);
         // _molitva.setText(_konst.molitveTekst[_counter]);
         _molitva.setText(getResources().getStringArray(R.array.vrline_detail)[_counter]);
         _molitva.setMovementMethod(new ScrollingMovementMethod());
@@ -51,7 +52,7 @@ public class NektarijeDetail extends AppCompatActivity {
 
             }
         });
-        mAdView = findViewById(R.id.adMolitva);
+        mAdView = findViewById(R.id.ad_nektarije);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }

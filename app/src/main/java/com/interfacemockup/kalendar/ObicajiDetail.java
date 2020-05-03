@@ -42,6 +42,9 @@ public class ObicajiDetail extends AppCompatActivity {
         _naslov.setText(naslov);
         _obicaj.setText(obicaj);
 
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
     }
 
     private void addMob(){
