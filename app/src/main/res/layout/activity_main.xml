@@ -273,7 +273,7 @@
           android:layout_margin="5dp"
           android:padding="5dp"
           android:onClick="otvori_danasnje_zitije"
-          android:src="@drawable/ic_publish_48px"/>
+          android:src="@drawable/ic_unfold_more_48px"/>
 
    </LinearLayout>
 
