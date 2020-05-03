@@ -26,7 +26,7 @@
 
     <TextView
         android:id="@+id/id_obicaj_text_detail"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -34,17 +34,30 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/mirosln"
         android:padding="10dp"
+        android:gravity="center_vertical"
         android:text="@string/obicaj_detalj"
-        android:textAlignment="viewStart"
+        android:textAlignment="gravity"
         android:scrollbars="vertical"
         android:scrollbarThumbVertical="@color/colorOrange"
         android:textColor="@color/colorBanana"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/id_obicaji_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_naslov_obicaja"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/id_obicaji_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-7920431183682527/2760694122"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_naslov_obicaja"
-        app:layout_constraintVertical_bias="0.501" />
+        app:layout_constraintHorizontal_bias="0.333">
+    </com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

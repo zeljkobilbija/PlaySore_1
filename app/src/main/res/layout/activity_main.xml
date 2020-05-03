@@ -284,7 +284,7 @@
            android:layout_height="wrap_content"
            android:layout_centerHorizontal="true"
            android:layout_alignParentBottom="true"
-           app:adSize="SMART_BANNER"
+           app:adSize="BANNER"
            app:adUnitId="ca-app-pub-7920431183682527/3639868432"
            app:layout_constraintBottom_toBottomOf="@+id/bgView"
            app:layout_constraintEnd_toEndOf="parent"
