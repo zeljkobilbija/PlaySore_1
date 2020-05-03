@@ -12,13 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".NektarijeDetail"
+        <activity android:name=".ZitijeDva"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".NektarijeDetail"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".NektarijeSpisak"
+        <activity
+            android:name=".NektarijeSpisak"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".ObicajiDetail"
+        <activity
+            android:name=".ObicajiDetail"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity

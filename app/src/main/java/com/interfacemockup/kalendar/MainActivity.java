@@ -1,52 +1,43 @@
 package com.interfacemockup.kalendar;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.AssetManager;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.icu.util.Calendar;
 import android.icu.util.GregorianCalendar;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Handler;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
+
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.dynamiclinks.DynamicLink;
-import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
-import static android.content.ContentValues.TAG;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavnaIkona;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniGregorijanskiDatumLabel;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniJulijanskiDatumLabel;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel;
+import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniSvetacLabel;
 
-import com.interfacemockup.kalendar.pravoslavnekalkulacije.*;
+import java.util.Date;
+
 import hotchemi.android.rate.AppRate;
 
-import java.util.Arrays;
-import java.util.HashMap;
+import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -369,6 +360,22 @@ public class MainActivity extends AppCompatActivity {
                 .monitor();
 
         AppRate.showRateDialogIfMeetsConditions(this);
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void otvori_danasnje_zitije(View view) {
+
+        int index = shared_kalendar_instance.getRedniBrojDanaUGodini(_counter);
+        int mesec = shared_kalendar_instance.mes(_counter);
+        int dan_Mesec = shared_kalendar_instance.get_Mesec(_counter);
+
+        Intent intent = new Intent(this, ZitijeDva.class);
+        intent.putExtra("day", index - 1);
+        intent.putExtra("month", mesec);
+        intent.putExtra("monthDay", dan_Mesec - 1);
+        intent.putExtra("counter", _counter);
+        startActivity(intent);
     }
 
 }

@@ -42,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         GlobalnaClassa glob = GlobalnaClassa.getInstance();
-        glob.setPokaziAdMob(false);
+        glob.setPokaziAdMob(true);
 
     }
 
@@ -55,14 +55,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser currentUser){
-
-    }
-
-
-
-    //mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle);
-
-    private void odjebi(){
 
     }
 

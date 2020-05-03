@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_simple"
+    tools:context="com.interfacemockup.kalendar.DetailKalendar">
+
+    <ImageView
+        android:id="@+id/ikona_dva"
+        android:layout_width="117dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/svetac_dva"
+        android:contentDescription="@string/slika_svetitelja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cc" />
+
+    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniSvetacLabel
+        android:id="@+id/svetac_dva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:fontFamily="@font/mirosln"
+        android:padding="5dp"
+        android:textColor="@color/colorSiviText"
+        android:text="@string/ime_svetitelja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ikona_dva"
+        app:layout_constraintBottom_toTopOf="@+id/zitije_dva"/>
+
+    <TextView
+        android:id="@+id/zitije_dva"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:autofillHints="Text Zitija Svetitelja"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@color/colorOrange"
+        android:padding="10dp"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:isScrollContainer="true"
+        android:lines="1000"
+        android:text="@string/info_text"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBanana"
+        android:textSize="20sp"
+        android:fontFamily="@font/mirosln"
+        app:layout_constraintBottom_toTopOf="@+id/id_detail_kalendar_dva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svetac_dva"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/id_detail_kalendar_dva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="ca-app-pub-7920431183682527/5376456083"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.333">
+    </com.google.android.gms.ads.AdView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
