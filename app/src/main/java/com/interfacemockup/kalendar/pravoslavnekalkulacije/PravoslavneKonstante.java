@@ -101,51 +101,51 @@ public class PravoslavneKonstante {
             vaskrsMali = 61;
             vaskrsVeliki = 110;
 
-            petrovskiPostMin = 175;
-            petrovskiPostMax = 195;
+            petrovskiPostMin = 165;
+            petrovskiPostMax = 192;
 
         }
         if (godina == 2021) {
             vaskrsMali = 73;
             vaskrsVeliki = 122;
 
-            petrovskiPostMin = 174;
-            petrovskiPostMax = 194;
+            petrovskiPostMin = 164;
+            petrovskiPostMax = 191;
         }
         if (godina == 2022) {
             vaskrsMali = 65;
             vaskrsVeliki = 114;
 
-            petrovskiPostMin = 174;
-            petrovskiPostMax = 194;
+            petrovskiPostMin = 164;
+            petrovskiPostMax = 191;
         }
         if (godina == 2023) {
             vaskrsMali = 52;
             vaskrsVeliki = 106;
 
-            petrovskiPostMin = 174;
-            petrovskiPostMax = 194;
+            petrovskiPostMin = 164;
+            petrovskiPostMax = 191;
         }
         if (godina == 2024) {
             vaskrsMali = 76;
             vaskrsVeliki = 125;
 
-            petrovskiPostMin = 175;
-            petrovskiPostMax = 195;
+            petrovskiPostMin = 165;
+            petrovskiPostMax = 192;
         }
         if (godina == 2025) {
             vaskrsMali = 61;
             vaskrsVeliki = 110;
 
-            petrovskiPostMin = 174;
-            petrovskiPostMax = 194;
+            petrovskiPostMin = 164;
+            petrovskiPostMax = 191;
         }
         if (godina == 2026) {
             vaskrsMali = 53;
             vaskrsVeliki = 102;
 
-            petrovskiPostMin = 174;
-            petrovskiPostMax = 194;
+            petrovskiPostMin = 164;
+            petrovskiPostMax = 191;
         }
     }
 

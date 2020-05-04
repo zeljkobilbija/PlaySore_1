@@ -218,17 +218,17 @@ public class PravoslavniKalendar {
         }*/
         //TODO: Ako je prestupna godina onda ide (rbDanauGodini+1), a ako nije onda ide samo (rbDanauGodini)??? Proveriti!!!
 
-        if (rbDanauGodini+1 > 331 || rbDanauGodini < 7) {
+        if (rbDanauGodini > 331 || rbDanauGodini <= 7) {
             //this.setText("Божићни пост");
             str = "Божићни пост";
 
-        }else if (rbDanauGodini+1 > konstante.vaskrsMali && rbDanauGodini+1 < konstante.vaskrsVeliki){
+        }else if (rbDanauGodini > konstante.vaskrsMali && rbDanauGodini <= konstante.vaskrsVeliki){
             //this.setText("Васкршњи пост");
             str = "Васкршњи пост";
-        }else if (rbDanauGodini+1 > konstante.petrovskiPostMin && rbDanauGodini+1 < konstante.petrovskiPostMax){
+        }else if (rbDanauGodini > konstante.petrovskiPostMin && rbDanauGodini <= konstante.petrovskiPostMax){
             //this.setText("Петровски пост");
             str = "Петровски пост";
-        }else if (rbDanauGodini+1 > 225 && rbDanauGodini+1 < 240){
+        }else if (rbDanauGodini > 225 && rbDanauGodini <= 240){
             //this.setText("Госпојински пост");
             str =  "Госпојински пост";
         }else {
