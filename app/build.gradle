@@ -11,7 +11,7 @@ android {
         applicationId "com.interfacemockup.pravoslavac"
         minSdkVersion 24
         targetSdkVersion 29
-        versionCode 32
+        versionCode 33
         versionName "1.2.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
