@@ -17,7 +17,7 @@
        android:background="@drawable/gradient_simple"
        tools:ignore="MissingConstraints"
        tools:layout_editor_absoluteX="0dp"
-       tools:layout_editor_absoluteY="1dp" />
+       tools:layout_editor_absoluteY="0dp" />
 
    <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel
        android:id="@+id/idPostLabe"
@@ -143,11 +143,10 @@
               android:contentDescription="@string/selekcija_kalendara_"
               android:layout_width="50dp"
               android:layout_height="50dp"
-              android:background="@drawable/back_btn_big"
+          android:background="@drawable/back_btn_blue"
               android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriKalendar"
-          android:backgroundTint="@color/colorBanana"
               android:src="@drawable/ic_date_range_48px">
 
       </ImageView>
@@ -156,9 +155,8 @@
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:contentDescription="@string/katihizis_image"
-              android:background="@drawable/back_btn_big"
-              android:backgroundTint="@color/colorBanana"
-          android:layout_margin="5dp"
+          android:background="@drawable/back_btn_blue"
+              android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriKatihizis"
               android:src="@drawable/ic_book_48px">
@@ -169,11 +167,10 @@
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:contentDescription="@string/share_image"
-              android:background="@drawable/back_btn_big"
+          android:background="@drawable/back_btn_blue"
           android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="sharePravoslavca"
-              android:backgroundTint="@color/colorBanana"
           android:src="@drawable/ic_assignment_turned_in_48px">
 
       </ImageView>
@@ -182,8 +179,7 @@
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:contentDescription="@string/molitva_image"
-              android:background="@drawable/back_btn_big"
-              android:backgroundTint="@color/colorBanana"
+          android:background="@drawable/back_btn_blue"
           android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriMolitvenik"
@@ -196,8 +192,7 @@
               android:layout_width="50dp"
               android:layout_height="50dp"
               android:contentDescription="@string/info_image"
-              android:background="@drawable/back_btn_big"
-              android:backgroundTint="@color/colorBanana"
+          android:background="@drawable/back_btn_blue"
           android:layout_margin="5dp"
               android:padding="5dp"
               android:onClick="otvoriInfo"
@@ -226,8 +221,7 @@
           android:contentDescription="@string/info_image"
           android:layout_margin="5dp"
           android:padding="5dp"
-          android:background="@drawable/back_btn_big"
-          android:backgroundTint="@color/colorBanana"
+          android:background="@drawable/back_btn_blue"
           android:src="@drawable/ic_content_paste_48px"
       android:onClick="otvoriTortu"/>
       <ImageView
@@ -246,8 +240,7 @@
           android:layout_width="50dp"
           android:layout_height="50dp"
           android:contentDescription="@string/info_image"
-          android:background="@drawable/back_btn_big"
-          android:backgroundTint="@color/colorBanana"
+          android:background="@drawable/back_btn_big_red"
           android:layout_margin="5dp"
           android:padding="5dp"
           android:src="@drawable/ic_share_48px"
@@ -268,8 +261,7 @@
           android:layout_width="50dp"
           android:layout_height="50dp"
           android:contentDescription="@string/info_image"
-          android:background="@drawable/back_btn_big"
-          android:backgroundTint="@color/colorBanana"
+          android:background="@drawable/back_btn_blue"
           android:layout_margin="5dp"
           android:padding="5dp"
           android:onClick="otvori_danasnje_zitije"
