@@ -17,7 +17,7 @@
         android:text="@string/naziv_meseca"
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
-        android:textSize="22sp"
+        android:textSize="28sp"
         android:fontFamily="@font/mirosln"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/id_Trideset_dana_ListView"

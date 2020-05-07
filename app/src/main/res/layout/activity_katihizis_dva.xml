@@ -28,7 +28,7 @@
         android:text="@string/katihizis"
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
-        android:textSize="22sp"
+        android:textSize="28sp"
         android:fontFamily="@font/mirosln"
         app:layout_constraintBottom_toTopOf="@+id/id_katihizis_pitanja"
         app:layout_constraintEnd_toEndOf="parent"

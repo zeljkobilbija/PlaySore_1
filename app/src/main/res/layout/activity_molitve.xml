@@ -30,7 +30,7 @@
         android:layout_margin="8dp"
         android:textAlignment="center"
         android:textColor="@color/colorSiviText"
-        android:textSize="22sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

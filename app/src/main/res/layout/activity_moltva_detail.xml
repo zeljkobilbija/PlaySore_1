@@ -14,7 +14,7 @@
             android:text="molitva"
             android:fontFamily="@font/mirosln"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="28sp"
             android:padding="10dp"
             android:textColor="@color/colorSiviText"
             android:layout_margin="16dp"
