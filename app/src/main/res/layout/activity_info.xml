@@ -49,8 +49,7 @@
             app:adUnitId="ca-app-pub-7920431183682527/2895624799"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.333">
+            app:layout_constraintStart_toStartOf="parent">
     </com.google.android.gms.ads.AdView>
 
 

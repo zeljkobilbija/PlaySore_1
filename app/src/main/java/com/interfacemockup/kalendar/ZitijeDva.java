@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -60,6 +62,8 @@ public class ZitijeDva extends AppCompatActivity {
 
         _svetac.setBojuTexta(_counter);
 
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.sample_anim);
+        _ikona.startAnimation(anim);
 
         setZitije(_mesec);
 
