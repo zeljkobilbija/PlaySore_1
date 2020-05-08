@@ -167,7 +167,7 @@
              android:contentDescription="@string/katihizis_image"
              android:onClick="otvoriKatihizis"
              android:padding="5dp"
-             android:src="@drawable/ic_book_48px">
+             android:src="@drawable/ic_krst">
 
          </ImageView>
 
@@ -193,7 +193,7 @@
              android:contentDescription="@string/molitva_image"
              android:onClick="otvoriMolitvenik"
              android:padding="5dp"
-             android:src="@drawable/ic_pan_tool_48px">
+             android:src="@drawable/ic_molitva">
 
          </ImageView>
 
@@ -228,7 +228,7 @@
              android:contentDescription="@string/info_image"
              android:onClick="otvoriTortu"
              android:padding="5dp"
-             android:src="@drawable/ic_content_paste_48px" />
+             android:src="@drawable/ic_knjiga" />
 
          <ImageView
              android:id="@+id/id_B"
