@@ -8,6 +8,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -38,6 +41,7 @@ import java.util.Date;
 import hotchemi.android.rate.AppRate;
 
 import static android.content.ContentValues.TAG;
+import static com.interfacemockup.kalendar.R.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
     private PravoslavneKonstante _konstante;
 
     private AdView mAdView;
+    int _toggle;
+
+    private Button _btn_kal;
 
 
 
@@ -67,11 +74,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(layout.activity_main);
+
+        //_btn_kal = findViewById(id.btn_kal);
+       // _btn_kal.setAlpha(0);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         Bundle bundle = new Bundle();
-        bundle.putInt(FirebaseAnalytics.Param.ITEM_ID, R.id.id_B);
+        bundle.putInt(FirebaseAnalytics.Param.ITEM_ID, id.id_B);
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, bundle);
 
       //  bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, contentType);
@@ -88,16 +98,17 @@ public class MainActivity extends AppCompatActivity {
         rateApp();
 
         _counter = 0;
+        _toggle = 0;
         _calendar = GregorianCalendar.getInstance();
         shared_kalendar_instance = PravoslavniKalendar.getInstance();
         _konstante = new PravoslavneKonstante();
         _rb_danaUgodini = shared_kalendar_instance.vratiBrojDana(_counter);
-        _view = findViewById(R.id.bgView);
-        _postLabel = findViewById(R.id.idPostLabe);
-        _gregorijanskiDatumLabel = findViewById(R.id.idGregorijanskiDatumLabel);
-        _ikona = findViewById(R.id.idIkona);
-        _svetitelj = findViewById(R.id.idSvetacLabel);
-        _julijanskiDatumLabel = findViewById(R.id.idJulijanskiDatumLabel);
+        _view = findViewById(id.bgView);
+        _postLabel = findViewById(id.idPostLabe);
+        _gregorijanskiDatumLabel = findViewById(id.idGregorijanskiDatumLabel);
+        _ikona = findViewById(id.idIkona);
+        _svetitelj = findViewById(id.idSvetacLabel);
+        _julijanskiDatumLabel = findViewById(id.idJulijanskiDatumLabel);
 
         setUI(_counter);
         setSwipes(_rb_danaUgodini);
@@ -106,8 +117,11 @@ public class MainActivity extends AppCompatActivity {
 
     }// onCreate
 
-
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+      //  _btn_kal.setAlpha(0);
+    }
 
     @Override
     protected void onPause() {
@@ -148,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
         //TODO: Ova funkcija ispod izgleda nije uopste potrebna osim za pronalazenje tokena
         //findMessageToken();
 
@@ -172,9 +187,9 @@ public class MainActivity extends AppCompatActivity {
         Calendar cal = GregorianCalendar.getInstance();
         String[] imeSvetitelja;
         if (cal.isLenient()){
-            imeSvetitelja = getResources().getStringArray(R.array.imena_svetitelja_prestupna_godina);
+            imeSvetitelja = getResources().getStringArray(array.imena_svetitelja_prestupna_godina);
         }else {
-            imeSvetitelja = getResources().getStringArray(R.array.imena_svetitelja_prosta_godina);
+            imeSvetitelja = getResources().getStringArray(array.imena_svetitelja_prosta_godina);
         }
         _svetitelj.setText(imeSvetitelja[shared_kalendar_instance.vratiBrojDana(counter) - 1]);
         _svetitelj.setBojuTexta(counter);
@@ -240,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
                 setUI(_counter);
             }
 
-        });
+        }); // setOnTouchListener
 
     }// setSwipes
 
@@ -251,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }// adMob
@@ -271,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
                         String token = task.getResult().getToken();
 
                         // Log and toast
-                       String msg = getString(R.string.msg_token_fmt, token);
+                       String msg = getString(string.msg_token_fmt, token);
                       // System.out.println("HHHHHHHHHHHHHH");
                        // System.out.println(token);
                         Log.d(TAG, msg);
@@ -286,9 +301,9 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        String msg = getString(R.string.msg_subscribed);
+                        String msg = getString(string.msg_subscribed);
                         if (!task.isSuccessful()) {
-                            msg = getString(R.string.msg_subscribe_failed);
+                            msg = getString(string.msg_subscribe_failed);
                         }
                         Log.d(TAG, msg);
                         //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
@@ -329,6 +344,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void otvoriTortu(View view) {
+
+/*        if (_toggle == 0){
+           // _ikona.setTranslationY((float) 1000);
+            TranslateAnimation animation = new TranslateAnimation(0, 0, _ikona.getTop(), 1000);
+            _toggle = 1;
+        }else{
+            _ikona.setTranslationY((float) 0);
+            _toggle = 0;
+        }*/
+
+
+
+/*try {
+    _btn_kal.setAlpha(1);
+}catch (Error e){
+    System.out.println(e);
+}*/
+
 
         Intent intent = new Intent(this, NektarijeSpisak.class);
         startActivity(intent);
@@ -377,6 +410,8 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("counter", _counter);
         startActivity(intent);
     }
+
+
 
 }
 

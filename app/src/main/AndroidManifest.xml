@@ -59,7 +59,9 @@
             android:name=".DetailKalendar"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".Info" />
+        <activity android:name=".Info"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MesecniKalendar"
             android:screenOrientation="portrait"

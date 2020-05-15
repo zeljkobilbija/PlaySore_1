@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_simple"
+    android:animateLayoutChanges="true"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
@@ -145,6 +146,69 @@
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent">
 
+      <!--   <Button
+             android:id="@+id/btn_kal"
+             android:layout_width="60dp"
+             android:layout_height="60dp"
+             android:layout_margin="5dp"
+             android:backgroundTint="@color/colorOrange"
+             android:backgroundTintMode="screen"
+             android:background="@drawable/btn_settings_60_px"
+             android:textSize="20sp"
+             android:textAlignment="center"
+             android:textColor="@color/color_dark"
+             android:textStyle="italic"
+             android:onClick="otvoriKalendar"
+             android:text="Kal"/>
+
+         <Button
+             android:layout_width="60dp"
+             android:layout_height="50dp"
+             android:layout_margin="5dp"
+             android:background="@drawable/back_btn_blue"
+             android:textSize="20sp"
+             android:textAlignment="center"
+             android:textColor="@color/colorSiviText"
+             android:textStyle="italic"
+             android:onClick="otvoriKatihizis"
+             android:text="Kat"/>
+
+         <Button
+             android:layout_width="60dp"
+             android:layout_height="50dp"
+             android:layout_margin="5dp"
+             android:background="@drawable/back_btn_blue"
+             android:textSize="20sp"
+             android:textAlignment="center"
+             android:textColor="@color/colorSiviText"
+             android:textStyle="italic"
+             android:onClick="obicaji_open"
+             android:text="Obi"/>
+         <Button
+             android:layout_width="60dp"
+             android:layout_height="50dp"
+             android:layout_margin="5dp"
+             android:background="@drawable/back_btn_blue"
+             android:textSize="20sp"
+             android:textAlignment="center"
+             android:textColor="@color/colorSiviText"
+             android:textStyle="italic"
+             android:onClick="otvoriMolitvenik"
+             android:text="Mol"/>
+
+         <Button
+             android:layout_width="60dp"
+             android:layout_height="50dp"
+             android:layout_margin="5dp"
+             android:background="@drawable/back_btn_blue"
+             android:textSize="20sp"
+             android:textAlignment="center"
+             android:textColor="@color/colorSiviText"
+             android:textStyle="italic"
+             android:onClick="otvoriInfo"
+             android:text="Inf"/> -->
+
+
          <ImageView
              android:id="@+id/id_kalendar_imageA"
              android:layout_width="50dp"
@@ -193,7 +257,7 @@
              android:contentDescription="@string/molitva_image"
              android:onClick="otvoriMolitvenik"
              android:padding="5dp"
-             android:src="@drawable/ic_molitva">
+             android:src="@drawable/ic_pan_tool_48px">
 
          </ImageView>
 
@@ -228,7 +292,7 @@
              android:contentDescription="@string/info_image"
              android:onClick="otvoriTortu"
              android:padding="5dp"
-             android:src="@drawable/ic_knjiga" />
+             android:src="@drawable/ic_content_paste_48px" />
 
          <ImageView
              android:id="@+id/id_B"
