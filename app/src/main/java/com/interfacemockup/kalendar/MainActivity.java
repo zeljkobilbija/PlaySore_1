@@ -117,10 +117,15 @@ public class MainActivity extends AppCompatActivity {
 
     }// onCreate
 
+
+
     @Override
     protected void onResume() {
         super.onResume();
       //  _btn_kal.setAlpha(0);
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
     }
 
     @Override
@@ -140,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         addNekiKlinac();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)

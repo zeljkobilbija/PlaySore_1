@@ -79,6 +79,24 @@ public class ZitijeDva extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            adMob();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            adMob();
+        }
+    }
+
+
     private void setZitije(int rbMeseca){
         switch (rbMeseca){
             case 0:

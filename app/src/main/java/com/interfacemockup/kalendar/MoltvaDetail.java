@@ -46,6 +46,24 @@ public class MoltvaDetail extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+
     public void kliknazad_sa_molitvi_detail(View view) {
 /*        Intent intent = new Intent(getApplicationContext(), Molitve.class);
         startActivity(intent);*/

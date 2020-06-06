@@ -69,6 +69,21 @@ public class DetailKalendar extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
 
     private void setUI(int mesec, int dan){
         switch (mesec){

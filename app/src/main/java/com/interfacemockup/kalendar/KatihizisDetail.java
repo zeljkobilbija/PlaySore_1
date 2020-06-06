@@ -44,6 +44,24 @@ public class KatihizisDetail extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+
     public void backDetail(View view) {
 
         Intent backIntent = new Intent();

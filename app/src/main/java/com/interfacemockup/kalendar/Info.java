@@ -32,6 +32,24 @@ public class Info extends AppCompatActivity {
 
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+
     public void nazad(View view) {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);

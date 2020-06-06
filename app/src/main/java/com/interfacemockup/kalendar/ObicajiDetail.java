@@ -47,6 +47,24 @@ public class ObicajiDetail extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
+            addMob();
+        }
+    }
+
+
     private void addMob(){
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
