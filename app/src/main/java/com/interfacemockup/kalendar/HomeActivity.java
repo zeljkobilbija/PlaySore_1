@@ -1,8 +1,12 @@
 package com.interfacemockup.kalendar;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,17 +14,39 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class HomeActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 2000;
+    private static int SPLASH_TIME_OUT = 3500;
     private FirebaseAnalytics mFirebaseAnalytics;
     private FirebaseAuth mAuth;
 
+    private CircleImageView image;
+    private Animation sideAnimation;
+    private TextView _pravoslavac;
+    private Animation _sideAnimationpravoslavac;
+    private TextView _pravoslavac_dva;
+    private Animation _sideAnimationpravoslavac_dva;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        //Animacija 1
+        image = (CircleImageView) findViewById(R.id.imageView2);
+        sideAnimation = AnimationUtils.loadAnimation(this, R.anim.side_animation);
+        image.setAnimation(sideAnimation);
+        //Animacija 2
+        _pravoslavac = (TextView) findViewById(R.id.textView3);
+        _sideAnimationpravoslavac = AnimationUtils.loadAnimation(this, R.anim.side_animation_pravoslavac);
+        _pravoslavac.setAnimation(_sideAnimationpravoslavac);
+        //Animacija 3
+        _pravoslavac_dva = (TextView) findViewById(R.id.textView5);
+        _sideAnimationpravoslavac_dva = AnimationUtils.loadAnimation(this, R.anim.side_animation_pravoslavac_dva);
+        _pravoslavac_dva.setAnimation(_sideAnimationpravoslavac_dva);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -42,7 +68,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         GlobalnaClassa glob = GlobalnaClassa.getInstance();
-        glob.setPokaziAdMob(false);
+        glob.setPokaziAdMob(true);
 
     }
 
