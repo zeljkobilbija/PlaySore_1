@@ -84,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
         bundle.putInt(FirebaseAnalytics.Param.ITEM_ID, id.id_B);
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, bundle);
 
+
+
       //  bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, contentType);
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "id_C");
         mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SHARE, bundle);
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
         FirebaseInstanceId.getInstance().getInstanceId();
         FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
+        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
         addNekiKlinac();
 
         rateApp();
