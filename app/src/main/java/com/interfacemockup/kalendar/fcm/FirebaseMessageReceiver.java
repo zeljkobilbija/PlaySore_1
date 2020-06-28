@@ -51,9 +51,10 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
                     NotificationCompat.Builder builder = new NotificationCompat.Builder(this, channel_id)
                             .setSmallIcon(R.drawable.jesus)
                             .setSound(uri)
-                            .setAutoCancel(true)
+                            .setAutoCancel(false)
                             .setVibrate(new long[]{1000,1000,1000,1000})
                             .setOnlyAlertOnce(false)
+                            .setBadgeIconType(NotificationCompat.BADGE_ICON_SMALL)
                             .setContentIntent(pendingIntetnt);
 
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.JELLY_BEAN){
