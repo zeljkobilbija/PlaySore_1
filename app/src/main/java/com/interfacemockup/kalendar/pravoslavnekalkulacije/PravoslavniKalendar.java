@@ -225,7 +225,7 @@ public class PravoslavniKalendar {
         }else if (rbDanauGodini > konstante.vaskrsMali && rbDanauGodini <= konstante.vaskrsVeliki){
             //this.setText("Васкршњи пост");
             str = "Васкршњи пост";
-        }else if (rbDanauGodini > konstante.petrovskiPostMin && rbDanauGodini <= konstante.petrovskiPostMax){
+        }else if (rbDanauGodini > konstante.petrovskiPostMin && rbDanauGodini < konstante.petrovskiPostMax + 1){
             //this.setText("Петровски пост");
             str = "Петровски пост";
         }else if (rbDanauGodini > 225 && rbDanauGodini <= 240){

@@ -39,6 +39,7 @@ public class PravoslavniPostLabel extends AppCompatTextView {
     public void setPostLabelText(int counter){
         int rbDanauGodini = sharedKalendar.getRedniBrojDanaUGodini(counter);
         konstante.izracunajVaskrs(counter);
+       // konstante.izracunajVaskrs();
 
         if (rbDanauGodini > 331 || rbDanauGodini < 7) {
             this.setText("Божићни пост");
@@ -59,6 +60,8 @@ public class PravoslavniPostLabel extends AppCompatTextView {
     }
 
 
+
+    //ova funkcija nije nigde u upotrebi
     @RequiresApi(api = Build.VERSION_CODES.N)
     public String setPostLabelText(int mesec, int dan){
         int rbDanauGodini = sharedKalendar.getRBDanauGodini(mesec, dan);

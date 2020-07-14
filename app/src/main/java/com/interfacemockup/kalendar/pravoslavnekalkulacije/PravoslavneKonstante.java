@@ -17,7 +17,7 @@ public class PravoslavneKonstante {
 
     public int globalniKatihizisInt;
 
-
+// POST ZA MAIN VIEW ---- PROVERITI!!!
     public void izracunajVaskrs(int counter) {
 
         godina = sharedKalendar.getGodinu(counter);
@@ -27,7 +27,9 @@ public class PravoslavneKonstante {
             vaskrsMali = 69;
             vaskrsVeliki = 118;
 
-            petrovskiPostMin = 174;
+            /*petrovskiPostMin = 174;
+            petrovskiPostMax = 194;*/
+            petrovskiPostMin = 165;
             petrovskiPostMax = 194;
         }
 
@@ -35,29 +37,37 @@ public class PravoslavneKonstante {
             vaskrsMali = 61;
             vaskrsVeliki = 110;
 
-            petrovskiPostMin = 175;
-            petrovskiPostMax = 195;
+            /*petrovskiPostMin = 175;
+            petrovskiPostMax = 194;*/
+            petrovskiPostMin = 166;
+            petrovskiPostMax = 194;
 
         }
         if (godina == 2021) {
             vaskrsMali = 73;
             vaskrsVeliki = 122;
 
-            petrovskiPostMin = 174;
+            /*petrovskiPostMin = 174;
+            petrovskiPostMax = 194;*/
+            petrovskiPostMin = 166;
             petrovskiPostMax = 194;
         }
         if (godina == 2022) {
             vaskrsMali = 65;
             vaskrsVeliki = 114;
 
-            petrovskiPostMin = 174;
+            /*petrovskiPostMin = 174;
+            petrovskiPostMax = 194;*/
+            petrovskiPostMin = 166;
             petrovskiPostMax = 194;
         }
         if (godina == 2023) {
             vaskrsMali = 52;
             vaskrsVeliki = 106;
 
-            petrovskiPostMin = 174;
+            /*petrovskiPostMin = 174;
+            petrovskiPostMax = 194;*/
+            petrovskiPostMin = 163;
             petrovskiPostMax = 194;
         }
         if (godina == 2024) {
@@ -84,6 +94,8 @@ public class PravoslavneKonstante {
     }
 
 
+    //POST ZA MESECNI KALENDAR ----PROVERITI!!!
+    // ovaj spisak konstanti izgleda nije u upotrebi nigde
     public void izracunajVaskrs() {
 
         godina = sharedKalendar.getTrenutnuGodinu();
@@ -93,59 +105,75 @@ public class PravoslavneKonstante {
             vaskrsMali = 69;
             vaskrsVeliki = 118;
 
-            petrovskiPostMin = 174;
-            petrovskiPostMax = 194;
+            petrovskiPostMin = 165;
+            petrovskiPostMax = 192;
+            //petrovskiPostMin = 174;
+            //petrovskiPostMax = 194;
         }
 
         if (godina == 2020) {
             vaskrsMali = 61;
             vaskrsVeliki = 110;
 
-            petrovskiPostMin = 165;
+             petrovskiPostMin = 165;
             petrovskiPostMax = 192;
+           /* petrovskiPostMin = 175;
+            petrovskiPostMax = 194;*/
 
         }
         if (godina == 2021) {
             vaskrsMali = 73;
             vaskrsVeliki = 122;
 
-            petrovskiPostMin = 164;
-            petrovskiPostMax = 191;
+             petrovskiPostMin = 165;
+            petrovskiPostMax = 192;
+            //petrovskiPostMin = 175;
+            //petrovskiPostMax = 194;
         }
         if (godina == 2022) {
             vaskrsMali = 65;
             vaskrsVeliki = 114;
 
-            petrovskiPostMin = 164;
-            petrovskiPostMax = 191;
+            petrovskiPostMin = 165;
+            petrovskiPostMax = 192;
+            /*petrovskiPostMin = 175;
+            petrovskiPostMax = 194;*/
         }
         if (godina == 2023) {
             vaskrsMali = 52;
             vaskrsVeliki = 106;
 
             petrovskiPostMin = 164;
-            petrovskiPostMax = 191;
+            petrovskiPostMax = 192;
+            /*petrovskiPostMin = 175;
+            petrovskiPostMax = 194;*/
         }
         if (godina == 2024) {
             vaskrsMali = 76;
             vaskrsVeliki = 125;
 
-            petrovskiPostMin = 165;
-            petrovskiPostMax = 192;
+           // petrovskiPostMin = 165;
+            //petrovskiPostMax = 192;
+            petrovskiPostMin = 175;
+            petrovskiPostMax = 194;
         }
         if (godina == 2025) {
             vaskrsMali = 61;
             vaskrsVeliki = 110;
 
-            petrovskiPostMin = 164;
-            petrovskiPostMax = 191;
+           /* petrovskiPostMin = 164;
+            petrovskiPostMax = 191;*/
+            petrovskiPostMin = 175;
+            petrovskiPostMax = 194;
         }
         if (godina == 2026) {
             vaskrsMali = 53;
             vaskrsVeliki = 102;
 
-            petrovskiPostMin = 164;
-            petrovskiPostMax = 191;
+            /*petrovskiPostMin = 164;
+            petrovskiPostMax = 191;*/
+            petrovskiPostMin = 175;
+            petrovskiPostMax = 194;
         }
     }
 
