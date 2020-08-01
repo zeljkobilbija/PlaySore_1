@@ -52,7 +52,7 @@
         android:id="@+id/ad_nektarije"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:adSize="BANNER"
+        app:adSize="LARGE_BANNER"
         app:adUnitId="ca-app-pub-7920431183682527/5657841278"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
