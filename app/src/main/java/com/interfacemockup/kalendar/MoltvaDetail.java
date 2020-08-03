@@ -27,7 +27,7 @@ public class MoltvaDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_moltva_detail);
+        setContentView(R.layout.molitva_detail_activity);
         _counter = getIntent().getIntExtra("molitva", 0);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");

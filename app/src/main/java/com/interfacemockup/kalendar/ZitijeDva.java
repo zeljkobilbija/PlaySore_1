@@ -39,7 +39,7 @@ public class ZitijeDva extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_zitije_dva);
+        setContentView(R.layout.zitije_dva_activity);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_simple"
+    android:weightSum="12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/naslov_molive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="molitva"
+            android:fontFamily="@font/mirosln"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:padding="10dp"
+            android:textColor="@color/colorSiviText"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/id_text_molitve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mirosln"
+                android:padding="10dp"
+                android:layout_margin="8dp"
+                android:text="@string/ime_svetitelja"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBanana"
+                android:textSize="20sp"/>
+
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adMolitva"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:adSize="LARGE_BANNER"
+            app:adUnitId="ca-app-pub-7920431183682527/3060219245"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

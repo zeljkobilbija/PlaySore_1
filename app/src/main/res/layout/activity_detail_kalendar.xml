@@ -36,6 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ikona"
         app:layout_constraintBottom_toTopOf="@+id/zitije"/>
 
+
     <TextView
         android:id="@+id/zitije"
         android:layout_width="match_parent"

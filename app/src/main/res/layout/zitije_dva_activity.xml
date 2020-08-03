@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_simple"
+    android:weightSum="12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ikona_dva"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="142dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/slika_svetitelja"
+                app:srcCompat="@drawable/ik_124" />
+
+            <com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniSvetacLabel
+                android:id="@+id/svetac_dva"
+                android:lines="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:padding="2dp"
+                android:fontFamily="@font/mirosln"
+                android:textColor="@color/colorSiviText"
+                android:text="@string/ime_svetitelja" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:id="@+id/zitije_dva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:autofillHints="Text Zitija Svetitelja"
+            android:padding="10dp"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:text="@string/info_text"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorBanana"
+            android:textSize="20sp"
+            android:fontFamily="@font/mirosln"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/id_detail_kalendar_dva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:adSize="LARGE_BANNER"
+            app:adUnitId="ca-app-pub-7920431183682527/3569351096">
+
+        </com.google.android.gms.ads.AdView>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

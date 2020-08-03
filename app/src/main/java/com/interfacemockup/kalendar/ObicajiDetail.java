@@ -23,7 +23,7 @@ public class ObicajiDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_obicaji_detail);
+        setContentView(R.layout.obicaji_detail_activity);
 
         MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 
