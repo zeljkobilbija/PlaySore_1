@@ -31,7 +31,7 @@
         android:padding="5dp"
         android:text="@string/info_text"
         android:textAlignment="center"
-        android:textColor="@color/colorBanana"
+        android:textColor="@color/colorPromenljivi"
         android:textSize="18sp"
         android:fontFamily="@font/mirosln"
         app:layout_constraintBottom_toTopOf="@+id/reklama"

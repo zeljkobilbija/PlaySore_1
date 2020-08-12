@@ -39,7 +39,7 @@
         android:textAlignment="gravity"
         android:scrollbars="vertical"
         android:scrollbarThumbVertical="@color/colorOrange"
-        android:textColor="@color/colorBanana"
+        android:textColor="@color/colorPromenljivi"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/id_obicaji_add"
         app:layout_constraintEnd_toEndOf="parent"

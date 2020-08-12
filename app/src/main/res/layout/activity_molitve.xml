@@ -15,7 +15,6 @@
         android:layout_height="0dp"
         android:layout_margin="8dp"
         android:dividerHeight="4dp"
-        android:scrollbarThumbVertical="@color/colorOrange"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

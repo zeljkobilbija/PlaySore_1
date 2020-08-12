@@ -47,7 +47,7 @@ public class PravoslavniPostLabel extends AppCompatTextView {
             this.setText("Васкршњи пост");
         }else if (rbDanauGodini > konstante.petrovskiPostMin && rbDanauGodini < konstante.petrovskiPostMax){
             this.setText("Петровски пост");
-        }else if (rbDanauGodini > 225 && rbDanauGodini < 240){
+        }else if (rbDanauGodini > 226 && rbDanauGodini <= 241){
             this.setText("Госпојински пост");
         }else {
             if ((sharedKalendar.petakJe(counter)) || (sharedKalendar.sredaJe(counter))) {

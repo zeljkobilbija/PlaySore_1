@@ -31,7 +31,7 @@
         android:scrollbars="vertical"
         android:text="@string/textview_odgovor"
         android:textAlignment="textStart"
-        android:textColor="@color/colorBanana"
+        android:textColor="@color/colorPromenljivi"
         android:textSize="20sp"
         android:fontFamily="@font/mirosln"
         app:layout_constraintBottom_toTopOf="@id/id_kat_detail"

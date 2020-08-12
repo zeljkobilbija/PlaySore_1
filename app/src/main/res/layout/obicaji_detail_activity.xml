@@ -46,7 +46,7 @@
             android:textAlignment="gravity"
             android:scrollbars="vertical"
             android:scrollbarThumbVertical="@color/colorOrange"
-            android:textColor="@color/colorBanana"
+            android:textColor="@color/colorPromenljivi"
             android:textSize="20sp"/>
 
 

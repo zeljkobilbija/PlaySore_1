@@ -41,7 +41,7 @@
                 android:layout_margin="8dp"
                 android:text="@string/ime_svetitelja"
                 android:textAlignment="textStart"
-                android:textColor="@color/colorBanana"
+                android:textColor="@color/colorPromenljivi"
                 android:textSize="20sp"/>
 
         </ScrollView>

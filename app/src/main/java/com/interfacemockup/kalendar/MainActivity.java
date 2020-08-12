@@ -1,9 +1,12 @@
 package com.interfacemockup.kalendar;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.icu.util.Calendar;
 import android.icu.util.GregorianCalendar;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -36,6 +40,10 @@ import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniJulijanski
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniPostLabel;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniSvetacLabel;
 
+
+import org.jsoup.Jsoup;
+
+import java.io.IOException;
 import java.util.Date;
 
 import hotchemi.android.rate.AppRate;
@@ -67,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
     int _toggle;
 
     private Button _btn_kal;
+    String sCurrentVersion, sLatestVersion;
+    int staraV = 3;
+    int novaV = 2;
 
 
 
@@ -78,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
 
         //_btn_kal = findViewById(id.btn_kal);
        // _btn_kal.setAlpha(0);
+
+        // Get l,atest version numer from Play Store
+        new GetLatestVersion().execute();
+
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         Bundle bundle = new Bundle();
@@ -156,8 +171,8 @@ public class MainActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void setUI(int counter_to_add){
 
-        _postLabel.setPostLabelText(counter_to_add);
-        _postLabel.setPostLabelColor(counter_to_add);
+        _postLabel.setPostLabelText(counter_to_add );
+        _postLabel.setPostLabelColor(counter_to_add );
 
         _gregorijanskiDatumLabel.napisiIzmenjeniDatum(counter_to_add);
         _gregorijanskiDatumLabel.setBojuTexta(counter_to_add);
@@ -391,7 +406,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void rateApp(){
-        AppRate.with(this)
+        AppRate.with(MainActivity.this)
                 .setInstallDays(3)
                 .setLaunchTimes(5)
                 .setTitle("Оцените Православни Календар")
@@ -403,7 +418,7 @@ public class MainActivity extends AppCompatActivity {
                 .setRemindInterval(5)
                 .monitor();
 
-        AppRate.showRateDialogIfMeetsConditions(this);
+        AppRate.showRateDialogIfMeetsConditions(MainActivity.this);
     }
 
 
@@ -420,6 +435,82 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("monthDay", dan_Mesec - 1);
         intent.putExtra("counter", _counter);
         startActivity(intent);
+    }
+
+    private class GetLatestVersion extends AsyncTask<String, Void, String > {
+        @Override
+        protected String doInBackground(String... strings) {
+            System.out.println("QQQQQQQQQQQQ Falimento 111");
+            try {
+                sLatestVersion = Jsoup
+                        .connect("https://play.google.com/store/apps/details?id=" + getPackageName())
+                        .timeout(30000)
+                        .get()
+                        .select("div.hAyfc:nth-child(4)>" + "span:nth-child(2) > div:nth-child(1)" + "> span:nth-child(1)")
+                        .first()
+                        .ownText();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+
+                System.out.println("QQQQQQQQQQQQ Falimento 2222");
+            }
+
+            return sLatestVersion;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            // Get current version
+            sCurrentVersion = BuildConfig.VERSION_NAME;
+
+            if (sLatestVersion != null){
+
+
+
+                float lVersion = Float.parseFloat(sLatestVersion);
+                float cVersion = Float.parseFloat(sCurrentVersion);
+
+
+                if (lVersion  > cVersion){
+                    updateAlertDialoig();
+                }
+
+
+            }
+        }
+    }
+
+    private void updateAlertDialoig() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+       // builder.setTitle(getResources().getString(R.string.app_name));
+        builder.setTitle("Православни календар");
+        builder.setMessage("Нова верзија Православног календара је доступна за инсталацију. Пожељно је користити најновију верзију због исправљених грешака и нових могућности апликације.");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Нова верзија", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Open Play Store
+                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.interfacemockup.pravoslavac")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+                dialogInterface.dismiss();
+
+
+            }
+        });
+        //on Cancel
+        builder.setNegativeButton("Одустани", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Cancel Alert dialog
+                dialogInterface.cancel();
+
+            }
+        });
+        // Shov alert Dialog
+        builder.show();
     }
 
 
