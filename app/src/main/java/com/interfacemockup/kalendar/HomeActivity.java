@@ -19,6 +19,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 
 import org.jsoup.Jsoup;
 
@@ -65,6 +66,10 @@ public class HomeActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+
+
+
 
         FirebaseMessaging.getInstance().setAutoInitEnabled(true);
 

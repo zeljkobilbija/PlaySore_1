@@ -1,8 +1,13 @@
 package com.interfacemockup.kalendar;
 
 import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.icu.util.Calendar;
 import android.icu.util.GregorianCalendar;
 import android.net.Uri;
@@ -34,6 +39,8 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavnaIkona;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniGregorijanskiDatumLabel;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniJulijanskiDatumLabel;
@@ -45,6 +52,8 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Objects;
 
 import hotchemi.android.rate.AppRate;
 
@@ -79,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
     int staraV = 3;
     int novaV = 2;
 
+    private FirebaseRemoteConfig remoteConfig;
+    private String old_version, new_version, boja_pozadine;
+    private FirebaseRemoteConfig konfiguracija;
+
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -87,12 +100,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_main);
 
-        //_btn_kal = findViewById(id.btn_kal);
-       // _btn_kal.setAlpha(0);
+        //new GetLatestVersion().execute();
+        // remote configur *********
+        konfiguracija = FirebaseRemoteConfig.getInstance();
+        FirebaseRemoteConfigSettings.Builder bilder = new FirebaseRemoteConfigSettings.Builder();
+        if (BuildConfig.DEBUG){
+            long cacheInterval = 0;
+            bilder.setMinimumFetchIntervalInSeconds(cacheInterval);
+        }
+        konfiguracija.setConfigSettingsAsync(bilder.build());
+        konfiguracija.setDefaultsAsync(xml.remote_config_defaults);
 
-        // Get l,atest version numer from Play Store
-        new GetLatestVersion().execute();
-
+        //Toast.makeText(this, konfiguracija.getString(old_version), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, konfiguracija.getString("old_version"), Toast.LENGTH_LONG).show();
+        fetchRemoteTitle();
+        // remote configur *********
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         Bundle bundle = new Bundle();
@@ -131,20 +153,110 @@ public class MainActivity extends AppCompatActivity {
         setUI(_counter);
         setSwipes(_rb_danaUgodini);
 
-
+        // Remote configurazione Firebase
+//        HashMap <String , Object> defaultsRate = new HashMap<>();
+//        defaultsRate.put("new Version code ", String.valueOf(getVersionCode()));
+//        remoteConfig = FirebaseRemoteConfig.getInstance();
+//        FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
+//                .setFetchTimeoutInSeconds(10)
+//                .build();
+//        remoteConfig.setConfigSettingsAsync(configSettings);
+//        remoteConfig.setDefaultsAsync(defaultsRate);
+//
+//        remoteConfig.fetchAndActivate().addOnCompleteListener(new OnCompleteListener<Boolean>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Boolean> task) {
+//                if (task.isSuccessful()){
+//                    Object key;
+//                     final String new_version_code = remoteConfig.getString("new_version_code");
+//                    if (Integer.parseInt(new_version_code) > getVersionCode()){
+//                        showDialog(new_version_code);
+//                    }
+//                }
+//            }
+//        });
 
     }// onCreate
 
+    private void fetchRemoteTitle() {
+
+        //Toast.makeText(this, konfiguracija.getString("new_version"), Toast.LENGTH_LONG).show();
+        konfiguracija.fetchAndActivate()
+                .addOnCompleteListener(this, new OnCompleteListener<Boolean>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Boolean> task) {
+                        if (task.isSuccessful()) {
+                            boolean updated = task.getResult();
+                           float stariji = Float.parseFloat(konfiguracija.getString("old_version"));
+                           float noviji = Float.parseFloat(konfiguracija.getString("new_version"));
+
+                            if (noviji > stariji){
+
+                                updateAlertDialoig();
+                            }else {
+
+                            }
+                           
+                           
+                        } else {
+                            Toast.makeText(MainActivity.this, "Fetch failed",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
+
+
+    private void showDialog(String VersionFromRemoteConfig) {
+        final AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("New version avaible")
+                .setMessage("Previos version:1\nlatest version here: " + VersionFromRemoteConfig)
+                .setPositiveButton("Update", null)
+                .show();
+        dialog.setCancelable(false);
+        Button positiveButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        positiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=\" + \"com.interfacemockup.pravoslavac")));
+
+                }catch (android.content.ActivityNotFoundException anfe){
+
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + "com.interfacemockup.pravoslavac")));
+
+                }
+            }
+        });
+    }
 
 
     @Override
     protected void onResume() {
         super.onResume();
-      //  _btn_kal.setAlpha(0);
+
+        // remote configur *********
+        konfiguracija = FirebaseRemoteConfig.getInstance();
+        FirebaseRemoteConfigSettings.Builder bilder = new FirebaseRemoteConfigSettings.Builder();
+        if (BuildConfig.DEBUG){
+            long cacheInterval = 0;
+            bilder.setMinimumFetchIntervalInSeconds(cacheInterval);
+        }
+        konfiguracija.setConfigSettingsAsync(bilder.build());
+        konfiguracija.setDefaultsAsync(xml.remote_config_defaults);
+
+        //Toast.makeText(this, konfiguracija.getString(old_version), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, konfiguracija.getString("old_version"), Toast.LENGTH_LONG).show();
+        fetchRemoteTitle();
+        // remote configur *********
+
         if (GlobalnaClassa.getInstance().getPokaziAdMob()){
             addMob();
         }
     }
+
+
 
     @Override
     protected void onPause() {
@@ -182,6 +294,7 @@ public class MainActivity extends AppCompatActivity {
 
         _julijanskiDatumLabel.napisiJulijanskiDatum(counter_to_add);
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
+
 
         if (GlobalnaClassa.getInstance().getPokaziAdMob()){
             addMob();
@@ -513,6 +626,17 @@ public class MainActivity extends AppCompatActivity {
         builder.show();
     }
 
+
+
+    public int getVersionCode(){
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+        }catch (PackageManager.NameNotFoundException e){
+            Log.i("My Log Message", "NameNotFoundException " + e.getMessage());
+        }
+        return Objects.requireNonNull(packageInfo).versionCode;
+    }
 
 
 }
