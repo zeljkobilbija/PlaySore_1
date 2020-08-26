@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke android:color="@color/colorBanana"
+    <stroke android:color="@color/colorIkona"
         android:width="1dp"/>
     <gradient
         android:angle="270"

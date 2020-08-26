@@ -4,25 +4,31 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.messaging.FirebaseMessaging;
+
+import com.huawei.agconnect.config.AGConnectServicesConfig;
+import com.huawei.hms.aaid.HmsInstanceId;
+import com.huawei.hms.analytics.HiAnalytics;
+import com.huawei.hms.analytics.HiAnalyticsInstance;
+import com.huawei.hms.analytics.HiAnalyticsTools;
+import com.huawei.hms.common.ApiException;
+import com.huawei.hms.aaid.HmsInstanceId;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private static String TAG = "Home Activiti Token je";
     private static int SPLASH_TIME_OUT = 3500;
-    private FirebaseAnalytics mFirebaseAnalytics;
-    private FirebaseAuth mAuth;
 
+    private HmsInstanceId hmsInstanceId;
     private CircleImageView image;
     private Animation sideAnimation;
     private TextView _pravoslavac;
@@ -34,6 +40,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+
 
         //Animacija 1
         image = (CircleImageView) findViewById(R.id.imageView2);
@@ -49,15 +58,9 @@ public class HomeActivity extends AppCompatActivity {
         _pravoslavac_dva.setAnimation(_sideAnimationpravoslavac_dva);
 
 
-        mAuth = FirebaseAuth.getInstance();
-
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-
-        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
 
         Bundle bundle = new Bundle();
-        bundle.putString(FirebaseAnalytics.Param.METHOD, "odjebi");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle);
+
 
 
         new Handler().postDelayed(new Runnable() {
@@ -73,20 +76,49 @@ public class HomeActivity extends AppCompatActivity {
         GlobalnaClassa glob = GlobalnaClassa.getInstance();
         glob.setPokaziAdMob(true);
 
-    }
+        HiAnalyticsTools.enableLog();
+        HiAnalyticsInstance instance = HiAnalytics.getInstance(this);
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-    }
 
-    private void updateUI(FirebaseUser currentUser){
 
     }
 
+
+//    private void getToken() {
+//        new Thread() {
+//            @Override
+//            public void run() {
+//                try {
+//                    // read from agconnect-services.json
+//                    String appId = AGConnectServicesConfig.fromContext(HomeActivity.this).getString("client/app_id");
+//                    String token = HmsInstanceId.getInstance(HomeActivity.this).getToken(appId, "HCM");
+//                    Log.i(TAG, "get token:" + token);
+//                    if(!TextUtils.isEmpty(token)) {
+//                        sendRegTokenToServer(token);
+//                        Log.e(TAG, "get token not failed, ");
+//                    }
+//                } catch (ApiException e) {
+//                    Log.e(TAG, "get token failed, " + e);
+//                }
+//            }
+//        }.start();
+//    }
+//    private void sendRegTokenToServer(String token) {
+//        Log.i(TAG, "sending token to server. token:" + token);
+//    }
+//
+//    // This method callback must be completed in 10 seconds. Otherwise, you need to start a new Job for callback processing.
+//
+//    public void onNewToken(String token) {
+//        Log.i(TAG, "received refresh token:" + token);
+//        // send the token to your app server.
+//        if (!TextUtils.isEmpty(token)) {
+//            refreshedTokenToServer(token);
+//        }
+//    }
+//    private void refreshedTokenToServer(String token) {
+//        Log.i(TAG, "sending token to server. token:" + token);
+//    }
 
 
 }

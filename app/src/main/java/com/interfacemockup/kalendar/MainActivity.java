@@ -18,18 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
-import com.google.firebase.messaging.FirebaseMessaging;
+
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavnaIkona;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniGregorijanskiDatumLabel;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniJulijanskiDatumLabel;
@@ -42,11 +31,14 @@ import hotchemi.android.rate.AppRate;
 
 import static android.content.ContentValues.TAG;
 import static com.interfacemockup.kalendar.R.*;
+import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.BannerAdSize;
+import com.huawei.hms.ads.banner.BannerView;
 
 public class MainActivity extends AppCompatActivity {
 
    // private static final String TAG = "MyActivity";
-    private FirebaseAnalytics mFirebaseAnalytics;
+
     private PravoslavniPostLabel _postLabel;
     private PravoslavniGregorijanskiDatumLabel _gregorijanskiDatumLabel;
     private PravoslavnaIkona _ikona;
@@ -63,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private PravoslavniKalendar shared_kalendar_instance;
     private PravoslavneKonstante _konstante;
 
-    private AdView mAdView;
+
     int _toggle;
 
     private Button _btn_kal;
@@ -79,26 +71,10 @@ public class MainActivity extends AppCompatActivity {
         //_btn_kal = findViewById(id.btn_kal);
        // _btn_kal.setAlpha(0);
 
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-        Bundle bundle = new Bundle();
-        bundle.putInt(FirebaseAnalytics.Param.ITEM_ID, id.id_B);
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, bundle);
 
 
 
-      //  bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, contentType);
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "id_C");
-        mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SHARE, bundle);
-
-        MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
-
-        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(MainActivity.this);
-        FirebaseInstanceId.getInstance().getInstanceId();
-        FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
-        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
-        addNekiKlinac();
-
-        rateApp();
+        //rateApp();
 
         _counter = 0;
         _toggle = 0;
@@ -116,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
         setUI(_counter);
         setSwipes(_rb_danaUgodini);
 
+        // Obtain BannerView.
+        BannerView bannerView = findViewById(id.hw_danas_banner);
+        bannerView.setAdId("v7yfo37tkh");
+        bannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_320_50);
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
+
 
 
     }// onCreate
@@ -126,31 +109,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
       //  _btn_kal.setAlpha(0);
-        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
-        }
+
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        addNekiKlinac();
+
     }
 
 
     @Override
     protected void onStop() {
         super.onStop();
-        addNekiKlinac();
+
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        addNekiKlinac();
-        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
-        }
+
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -168,9 +147,7 @@ public class MainActivity extends AppCompatActivity {
         _julijanskiDatumLabel.napisiJulijanskiDatum(counter_to_add);
         _julijanskiDatumLabel.setBojuTexta(counter_to_add);
 
-        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
-        }
+
 
 
 
@@ -271,57 +248,13 @@ public class MainActivity extends AppCompatActivity {
     }// setSwipes
 
 
-    private void addMob(){
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        mAdView = findViewById(id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-    }// adMob
 
 
-    private void findMessageToken(){
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "getInstanceId failed", task.getException());
-                            return;
-                        }
-
-                        // Get new Instance ID token
-                        String token = task.getResult().getToken();
-
-                        // Log and toast
-                       String msg = getString(string.msg_token_fmt, token);
-                      // System.out.println("HHHHHHHHHHHHHH");
-                       // System.out.println(token);
-                        Log.d(TAG, msg);
-                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }// findMessageToken
 
 
-    private void addNekiKlinac(){
-        FirebaseMessaging.getInstance().subscribeToTopic("allDevices")
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        String msg = getString(string.msg_subscribed);
-                        if (!task.isSuccessful()) {
-                            msg = getString(string.msg_subscribe_failed);
-                        }
-                        Log.d(TAG, msg);
-                        //Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
-        // [END subscribe_topics]
-    }// adNekiKlinac
+
+
+
 
 
     
@@ -379,16 +312,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void obicaji_open(View view) {
-        
-        Uri link = DynamicLinksUtil.generateContentLink();
 
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("text/plain");
-        intent.putExtra(Intent.EXTRA_TEXT, link.toString());
-
-        startActivity(Intent.createChooser(intent, "Поделите апикацију Православац, Српски Православни Календар са својим пријатељима"));
-    }
 
     private void rateApp(){
         AppRate.with(this)

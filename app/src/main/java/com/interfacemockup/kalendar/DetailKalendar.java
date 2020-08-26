@@ -13,12 +13,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.RequestConfiguration;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
+import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.BannerAdSize;
+import com.huawei.hms.ads.banner.BannerView;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavneKonstante;
 import com.interfacemockup.kalendar.pravoslavnekalkulacije.PravoslavniKalendar;
 
@@ -34,14 +32,14 @@ public class DetailKalendar extends AppCompatActivity {
     private PravoslavneKonstante _konst;
     private ListView _list;
 
-    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_kalendar);
 
-        MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
+
 
         //new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("4F93385764579C780A11C861D3268329"));
 
@@ -63,27 +61,18 @@ public class DetailKalendar extends AppCompatActivity {
 /*        Animation anim = AnimationUtils.loadAnimation(this, R.anim.down_anim);
         _ikona.startAnimation(anim);*/
 
-        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
-        }
+        // Obtain BannerView.
+        BannerView bannerView = findViewById(R.id.hw_kalendar_banner);
+//
+        bannerView.setAdId("a19e0ravav");
+        bannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_320_50);
+
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
+
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
-        }
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
-        }
-    }
 
     private void setUI(int mesec, int dan){
         switch (mesec){
@@ -192,16 +181,7 @@ public class DetailKalendar extends AppCompatActivity {
     }
 
 
-    private void addMob(){
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        mAdView = findViewById(R.id.id_detail_kalendar);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-    }
+
 
 }
 

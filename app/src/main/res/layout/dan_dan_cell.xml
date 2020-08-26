@@ -17,7 +17,7 @@
         android:contentDescription="@string/dnevna_ikona"
         android:src="@drawable/nikabeli"
         app:civ_border_width="2dp"
-        app:civ_border_color="@color/colorOrange"
+        app:civ_border_color="@color/colorIkona"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >

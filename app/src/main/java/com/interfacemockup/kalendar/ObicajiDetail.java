@@ -7,25 +7,23 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.huawei.hms.ads.AdParam;
+import com.huawei.hms.ads.BannerAdSize;
+import com.huawei.hms.ads.banner.BannerView;
+
 
 public class ObicajiDetail extends AppCompatActivity {
 
     private int _selektor;
     private TextView _naslov;
     private  TextView _obicaj;
-    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_obicaji_detail);
 
-        MobileAds.initialize(this, "ca-app-pub-7920431183682527~1369121836");
 
 
         _naslov = findViewById(R.id.id_naslov_obicaja);
@@ -42,8 +40,17 @@ public class ObicajiDetail extends AppCompatActivity {
         _naslov.setText(naslov);
         _obicaj.setText(obicaj);
 
+        // Obtain BannerView.
+        BannerView bannerView = findViewById(R.id.hw_obicaji_banner);
+
+        bannerView.setAdId("o6tug9iy1u");
+        bannerView.setBannerAdSize(BannerAdSize.BANNER_SIZE_320_50);
+
+        AdParam adParam = new AdParam.Builder().build();
+        bannerView.loadAd(adParam);
+
         if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
+
         }
     }
 
@@ -52,7 +59,7 @@ public class ObicajiDetail extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
+
         }
     }
 
@@ -60,19 +67,8 @@ public class ObicajiDetail extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         if (GlobalnaClassa.getInstance().getPokaziAdMob()){
-            addMob();
+
         }
     }
 
-
-    private void addMob(){
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        mAdView = findViewById(R.id.id_obicaji_add);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-    }
 }

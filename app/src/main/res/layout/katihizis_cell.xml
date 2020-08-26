@@ -15,6 +15,6 @@
         android:fontFamily="@font/mirosln"
         android:padding="10dp"
         android:textSize="18sp"
-        android:textColor="@color/colorBanana"/>
+        android:textColor="@color/colorIkona"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
