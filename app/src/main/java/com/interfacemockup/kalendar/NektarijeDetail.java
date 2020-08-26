@@ -24,7 +24,7 @@ public class NektarijeDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nektarije_detail);
+        setContentView(R.layout.nektarije_detail_activity);
 
 
         _counter = getIntent().getIntExtra("nektarije", 0);

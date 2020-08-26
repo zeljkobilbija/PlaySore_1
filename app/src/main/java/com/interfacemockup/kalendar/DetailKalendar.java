@@ -37,7 +37,7 @@ public class DetailKalendar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_kalendar);
+        setContentView(R.layout.kalendar_detail_activity);
 
 
 

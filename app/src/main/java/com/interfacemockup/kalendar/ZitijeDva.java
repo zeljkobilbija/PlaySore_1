@@ -38,7 +38,7 @@ public class ZitijeDva extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_zitije_dva);
+        setContentView(R.layout.zitije_dva_activity);
 
 
 

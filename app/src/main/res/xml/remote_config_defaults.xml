@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefaultsMap xmlns:android="http://schemas.android.com/apk/res/android">
+    <entry>
+        <key>old_version</key>
+        <value>47</value>
+    </entry>
+    <entry>
+        <key>new_version</key>
+        <value>48</value>
+    </entry>
+    <entry>
+        <key>boja_pozadine</key>
+        <value>332211</value>
+    </entry>
+
+</DefaultsMap>

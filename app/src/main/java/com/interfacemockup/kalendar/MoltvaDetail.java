@@ -25,7 +25,7 @@ public class MoltvaDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_moltva_detail);
+        setContentView(R.layout.molitva_detail_activity);
         _counter = getIntent().getIntExtra("molitva", 0);
 
 
