@@ -66,7 +66,7 @@
         android:paddingEnd="20dp"
         android:paddingStart="29dp"
         android:text="@string/_2020_godina"
-        android:textColor="@color/colorTamnoSivo"
+        android:textColor="@color/colorSiviText"
         android:textAlignment="textEnd"
         android:fontFamily="@font/mirosln"
         android:textStyle="italic"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:hwads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/gradient_simple"
     android:weightSum="12"
@@ -70,16 +71,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/id_detail_kalendar_dva"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+        <com.huawei.hms.ads.banner.BannerView
+            android:id="@+id/hw_zitije_dva_banner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
-            app:adSize="LARGE_BANNER"
-            app:adUnitId="ca-app-pub-7920431183682527/3569351096">
-
-        </com.google.android.gms.ads.AdView>
+            android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            hwads:adId="j0rawspf7i"
+            hwads:bannerSize="BANNER_SIZE_320_50"/>
 
 
     </RelativeLayout>
